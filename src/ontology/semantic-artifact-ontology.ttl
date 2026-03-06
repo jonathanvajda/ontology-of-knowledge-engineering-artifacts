@@ -158,6 +158,7 @@ semarto:has_competency_question_text_value rdf:type owl:DatatypeProperty ;
 semarto:has_git_respository_url rdf:type owl:DatatypeProperty ;
                                 rdfs:range xsd:anyURI ;
                                 rdfs:label "has git respository url"@en ;
+                                skos:definition "x has git repository url y iff x is some rdf:Resource and y is the uniform resource locator"
                                 cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
@@ -242,9 +243,10 @@ semarto:ont000001 rdf:type owl:Class ;
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000002
 semarto:ont000002 rdf:type owl:Class ;
                   rdfs:subClassOf semarto:ont000001 ;
-                  dcterms:bibliographicCitation "Gruniger Fox (1995). The Role of Competency Questions in Enterprise Engineering. In: Rolstatas Benchmarking - Theory and Practice."@en ;
-                  rdfs:label "Competency Question"@en ;
-                  skos:altLabel "CQ"@en ;
+                  dcterms:bibliographicCitation "Grüninger, M., Fox, M.S. (1995). The Role of Competency Questions in Enterprise Engineering. In: Rolstadås, A. (eds) Benchmarking — Theory and Practice. IFIP Advances in Information and Communication Technology. Springer, Boston, MA."@en ,
+                                                "https://doi.org/10.1007/978-0-387-34847-6_3"^^xsd:anyURI;
+                  rdfs:label "Competency Question Content Entity"@en ;
+                  skos:altLabel "Competency Question"@en , "CQ"@en ;
                   skos:definition "An Interrogative Information Content Entity that is expressed in natural language, that is designed to assist in identifying what information is to be returned for some information system query (tell-and-ask service), with respect to whether a framework has coverage of the terms, relationships, and inferences to enable the query."@en ;
                   skos:scopeNote "A competency question is typically used to provide a benchmark for what queries some information system is to handle and what vocabularies and taxonomies are relevant to answer the user's question."@en ;
                   cco2:ont00001753 "CQ"@en ;
@@ -254,9 +256,10 @@ semarto:ont000002 rdf:type owl:Class ;
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000003
 semarto:ont000003 rdf:type owl:Class ;
                   rdfs:subClassOf semarto:ont000001 ;
-                  dcterms:bibliographicCitation "The Department of Defense Architecture Framework (DoDAF), Version 2.0 (2009). Volume 1, 43-44."@en ;
-                  rdfs:label "Decision Support Question"@en ;
-                  skos:altLabel "DSQ" ;
+                  dcterms:bibliographicCitation "The Department of Defense Architecture Framework (DoDAF), Version 2.0 (2009). Volume 1, 43-44."@en , "https://dodcio.defense.gov/Portals/0/Documents/DODAF/DoDAF%20V2%20-%20Volume%201.pdf"^^xsd:anyURI ;
+                  rdfs:label "Decision Support Question Content Entity"@en ;
+                  skos:altLabel "Decision Support Question"@en ,
+                                "DSQ"@en ;
                   skos:definition "An Interrogative Information Content Entity that is expressed in natural language, that is designed to assist in identifying critical information requirements (CIRs) for making decisions regarding mission essential tasks (METs)."@en ;
                   skos:scopeNote "A decision support question may involve one or many competency questions, which, when considered as a collection, are relevant for enabling a decision-maker to perform their METs."@en ;
                   cco2:ont00001753 "DSQ"@en ;
@@ -267,6 +270,9 @@ semarto:ont000003 rdf:type owl:Class ;
 semarto:ont000004 rdf:type owl:Class ;
                   rdfs:subClassOf cco2:ont00000958 ;
                   rdfs:label "Mermaid Diagram"@en ;
+                  skos:definition "An Information Content Entity that represents some portion of reality visually, whose syntactic rules for generating an image is prescribed by the Mermaid syntax specification."@en ;
+                  skos:example "Mermaid syntax: ```graph TD; A[Agent<br>Activity ID: 123.12.001<br>System] --input in--> B{Is the system available:<br>Yes or No?}```"@en ;
+                  dcterms:bibliographicCitation "https://en.wikipedia.org/w/index.php?title=Mermaid_(software)&oldid=1341883926"xsd:anyURI ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
@@ -282,6 +288,7 @@ semarto:ont000005 rdf:type owl:Class ;
 semarto:ont000006 rdf:type owl:Class ;
                   rdfs:subClassOf semarto:ont000005 ;
                   rdfs:label "SQL Update Query"@en ;
+                  skos:definition "A SQL Query that is designed to request a change in data assertions stored by an information system."@en ;"
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
@@ -297,13 +304,15 @@ semarto:ont000007 rdf:type owl:Class ;
 semarto:ont000008 rdf:type owl:Class ;
                   rdfs:subClassOf semarto:ont000007 ;
                   rdfs:label "SPARQL Update Query"@en ;
-                  skos:definition "A SPARQL query that requests a change in data assertions stored by an information system."@en ;
+                  skos:definition "A SPARQL query is designed to request a change in data assertions stored by an information system."@en ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000009
 semarto:ont000009 rdf:type owl:Class ;
                   rdfs:subClassOf cco2:ont00000965 ;
+                  owl:equivalentClass [ a owl:Class ;
+                  owl:unionOf (cco2:00000653 , cco2:ont00000127 ) ] ;
                   rdfs:label "Business Rule"@en ;
                   skos:altLabel "Decision Logic" ;
                   skos:definition "A Directive Information Content Entity that is designed to direct planned processes performed by an organization and is either an Algorithm or a Performance Specification."@en ;
