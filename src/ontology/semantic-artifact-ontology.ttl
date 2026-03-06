@@ -59,6 +59,7 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_data_description_text_value
 semarto:has_data_description_text_value rdf:type owl:AnnotationProperty ;
+                                        rdfs:range xsd:string ;
                                         rdfs:label "has data description"@en ;
                                         cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> ;
                                         rdfs:subPropertyOf dcterms:description .
@@ -66,6 +67,7 @@ semarto:has_data_description_text_value rdf:type owl:AnnotationProperty ;
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_standardized_datafield_identifier
 semarto:has_standardized_datafield_identifier rdf:type owl:AnnotationProperty ;
+                                              rdfs:range xsd:string ;
                                               rdfs:label "has standardized datafield identifier"@en ;
                                               skos:definition "An identifier of a datafield, whose code identifier is standardized or normalizedprocedurally or according to some schema."@en ;
                                               skos:example "NIEM  uses an ID with a namespace prefix and then a human-readable identifier. E.g., 'nc:OrganizationType' to identify the data type that is about a 'body of people organize for a particular purpose.'"@en ;
@@ -88,29 +90,41 @@ cco2:ont00001760 rdf:type owl:AnnotationProperty .
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000010
 semarto:ont000010 rdf:type owl:ObjectProperty ;
+                  owl:inverseOf semarto:ont000011 ;
+                  rdfs:domain semarto:ont000002 ;
+                  rdfs:range cco2:ont00000958 ;
                   rdfs:label "has competency question"@en ;
-                  skos:definition "x has competency question y iff x" ;
+                  skos:definition "x has competency question y iff x is some information content entity, y is a competency question, and y is intended to be used to evaluate coverage of entities (or relations) for some portion of reality that x represents."@en ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000011
 semarto:ont000011 rdf:type owl:ObjectProperty ;
+                  owl:inverseOf semarto:ont000010 ;
+                  rdfs:domain cco2:ont00000958 ;
+                  rdfs:range semarto:ont000002 ;
                   rdfs:label "is competency question of"@en ;
-                  skos:definition "x is competency question of y iff x..." ;
+                  skos:definition "x is competency question of y iff y is some information content entity, x is a competency question, and x is intended to be used to evaluate coverage of entities (or relations) for some portion of reality that y represents."@en ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000012
 semarto:ont000012 rdf:type owl:ObjectProperty ;
+                  owl:inverseOf semarto:ont000013 ;
+                  rdfs:domain cco2:ont00000958 ;
+                  rdfs:range semarto:ont000004 ;
                   rdfs:label "has mermaid diagram"@en ;
-                  skos:definition "x has competency question y iff x" ;
+                  skos:definition "x has mermaid diagram y iff x is some information content entity, y is a mermaid diagram (content entity), and y is intended to be used to represent visually some entity (or relations) for some portion of reality that x represents."@en ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000013
 semarto:ont000013 rdf:type owl:ObjectProperty ;
+                  owl:inverseOf semarto:ont000012 ;
+                  rdfs:domain semarto:ont000004 ;
+                  rdfs:range cco2:ont00000958 ;
                   rdfs:label "is mermaid diagram of"@en ;
-                  skos:definition "x is competency question of y iff x..." ;
+                  skos:definition "x is mermaid diagram of y iff y is some information content entity, x is a mermaid diagram (content entity), and x is intended to be used to represent visually some entity (or relations) for some portion of reality that y represents."@en ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
@@ -134,44 +148,73 @@ semarto:ont000015 rdf:type owl:ObjectProperty ;
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_competency_question_text_value
 semarto:has_competency_question_text_value rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf cco2:ont00001765 ;
+                                           rdfs:range xsd:string ;
                                            rdfs:label "has competency question text value"@en ;
                                            cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_git_respository_url
 semarto:has_git_respository_url rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:anyURI ;
                                 rdfs:label "has git respository url"@en ;
                                 cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_mermaid_diagram_text_value
 semarto:has_mermaid_diagram_text_value rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf cco2:ont00001765 ;
+                                       rdfs:range xsd:string ;
                                        rdfs:label "has mermaid diagram text value"@en ;
                                        cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_query_text_value
 semarto:has_query_text_value rdf:type owl:DatatypeProperty ;
-                             rdfs:subPropertyOf semarto:has_query_text_value ;
+                             rdfs:subPropertyOf cco2:ont00001765 ;
+                             rdfs:range xsd:string ;
                              rdfs:label "has query text value"@en ;
                              cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_sparql_query_text_value
 semarto:has_sparql_query_text_value rdf:type owl:DatatypeProperty ;
-                                    rdfs:subPropertyOf semarto:has_sparql_query_text_value ;
+                                    rdfs:subPropertyOf semarto:has_query_text_value ;
+                                    rdfs:range xsd:string ;
                                     rdfs:label "has SPARQL query text value"@en ;
                                     cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_sparql_update_text_value
 semarto:has_sparql_update_text_value rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf semarto:has_sparql_query_text_value ,
+                                                        semarto:has_update_query_text_value ;
+                                     rdfs:range xsd:string ;
                                      rdfs:label "has SPARQL update query text value"@en ;
                                      cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_sparql_query_text_value
+semarto:has_sql_query_text_value rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf semarto:has_query_text_value ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:label "has SQL query text value"@en ;
+                                 cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
+
+
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_sparql_update_text_value
+semarto:has_sql_update_text_value rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf semarto:has_sql_query_text_value ,
+                                                     semarto:has_update_query_text_value ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:label "has SQL update query text value"@en ;
+                                  cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
+
+
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_update_query_text_value
 semarto:has_update_query_text_value rdf:type owl:DatatypeProperty ;
+                                    rdfs:subPropertyOf semarto:has_query_text_value ;
+                                    rdfs:range xsd:string ;
                                     rdfs:label "has update query text value"@en ;
                                     cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
