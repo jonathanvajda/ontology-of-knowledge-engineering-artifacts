@@ -24,7 +24,7 @@
     cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology>;
     skos:scopeNote "Strictly speaking, questions are the contents of interrogative sentences."@en ;
     dcterms:bibliographicCitation "Braun, D. (2022). Propositions and Questions. In Chris Tillman and Adam Murray (Eds), Routledge Handbook of Propositions."@en , "https://doi.org/10.4324/9781315270500-34"^^xsd:anyURI ;
-    skos:altLabel "Question".
+    skos:altLabel "Question"@en .
 <https://github.com/jonathanvajda/SemanticArtifactOntology/ont00002> a owl:Class;
     rdfs:label "Competency Question"@en ;
     skos:definition "An Interrogative Information Content Entity that is expressed in natural language, that is designed to assist in identifying what information is to be returned for some information system query (tell-and-ask service), with respect to whether a framework has coverage of the terms, relationships, and inferences to enable the query."@en ;
@@ -32,11 +32,13 @@
     cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology>;
     skos:scopeNote "A competency question is typically used to provide a benchmark for what queries some information system is to handle and what vocabularies and taxonomies are relevant to answer the user's question."@en ;
     dcterms:bibliographicCitation "Gruniger Fox (1995). The Role of Competency Questions in Enterprise Engineering. In: Rolstatas Benchmarking - Theory and Practice."@en ;
-    skos:altLabel "CQ".
+    cco2:ont00001753 "CQ"@en ;
+    skos:altLabel "CQ"@en .
 <https://github.com/jonathanvajda/SemanticArtifactOntology/ont00003> a owl:Class;
     rdfs:label "Decision Support Question"@en ;
     skos:definition "An Interrogative Information Content Entity that is expressed in natural language, that is designed to assist in identifying critical information requirements (CIRs) for making decisions regarding mission essential tasks (METs)."@en ;
     rdfs:subClassOf <https://github.com/jonathanvajda/ont00001>;
+    cco2:ont00001753 "DSQ"@en ;
     cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology>;
     skos:scopeNote "A decision support question may involve one or many competency questions, which, when considered as a collection, are relevant for enabling a decision-maker to perform their METs."@en ;
     dcterms:bibliographicCitation "The Department of Defense Architecture Framework (DoDAF), Version 2.0 (2009). Volume 1, 43-44."@en ;
