@@ -59,21 +59,21 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_data_description_text_value
 semarto:has_data_description_text_value rdf:type owl:AnnotationProperty ;
-                                        rdfs:range xsd:string ;
                                         rdfs:label "has data description"@en ;
                                         cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> ;
-                                        rdfs:subPropertyOf dcterms:description .
+                                        rdfs:subPropertyOf dcterms:description ;
+                                        rdfs:range xsd:string .
 
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_standardized_datafield_identifier
 semarto:has_standardized_datafield_identifier rdf:type owl:AnnotationProperty ;
-                                              rdfs:range xsd:string ;
                                               rdfs:label "has standardized datafield identifier"@en ;
                                               skos:definition "An identifier of a datafield, whose code identifier is standardized or normalizedprocedurally or according to some schema."@en ;
                                               skos:example "NIEM  uses an ID with a namespace prefix and then a human-readable identifier. E.g., 'nc:OrganizationType' to identify the data type that is about a 'body of people organize for a particular purpose.'"@en ;
                                               skos:scopeNote "As a matter of data architecture, data for entities are given unique identifiers that can be used univocally or analogously in different data tables or databases. The tokenenization of the identifier is what is in view."@en ;
                                               cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> ;
-                                              rdfs:subPropertyOf dcterms:identifier .
+                                              rdfs:subPropertyOf dcterms:identifier ;
+                                              rdfs:range xsd:string .
 
 
 ###  https://www.commoncoreontologies.org/ont00001753
@@ -194,7 +194,7 @@ semarto:has_sparql_update_text_value rdf:type owl:DatatypeProperty ;
                                      cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_sparql_query_text_value
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_sql_query_text_value
 semarto:has_sql_query_text_value rdf:type owl:DatatypeProperty ;
                                  rdfs:subPropertyOf semarto:has_query_text_value ;
                                  rdfs:range xsd:string ;
@@ -202,7 +202,7 @@ semarto:has_sql_query_text_value rdf:type owl:DatatypeProperty ;
                                  cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_sparql_update_text_value
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/has_sql_update_text_value
 semarto:has_sql_update_text_value rdf:type owl:DatatypeProperty ;
                                   rdfs:subPropertyOf semarto:has_sql_query_text_value ,
                                                      semarto:has_update_query_text_value ;
@@ -217,6 +217,10 @@ semarto:has_update_query_text_value rdf:type owl:DatatypeProperty ;
                                     rdfs:range xsd:string ;
                                     rdfs:label "has update query text value"@en ;
                                     cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
+
+
+###  https://www.commoncoreontologies.org/ont00001765
+cco2:ont00001765 rdf:type owl:DatatypeProperty .
 
 
 #################################################################
