@@ -86,42 +86,42 @@ cco2:ont00001760 rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00010
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000010
 semarto:ont000010 rdf:type owl:ObjectProperty ;
                   rdfs:label "has competency question"@en ;
                   skos:definition "x has competency question y iff x" ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00011
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000011
 semarto:ont000011 rdf:type owl:ObjectProperty ;
                   rdfs:label "is competency question of"@en ;
                   skos:definition "x is competency question of y iff x..." ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00012
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000012
 semarto:ont000012 rdf:type owl:ObjectProperty ;
                   rdfs:label "has mermaid diagram"@en ;
                   skos:definition "x has competency question y iff x" ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00013
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000013
 semarto:ont000013 rdf:type owl:ObjectProperty ;
                   rdfs:label "is mermaid diagram of"@en ;
                   skos:definition "x is competency question of y iff x..." ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00014
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000014
 semarto:ont000014 rdf:type owl:ObjectProperty ;
                   rdfs:label "has formalization"@en ;
                   skos:definition "x has competency question y iff x" ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00015
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000015
 semarto:ont000015 rdf:type owl:ObjectProperty ;
                   rdfs:label "is formalization of"@en ;
                   skos:definition "x is competency question of y iff x..." ;
@@ -180,98 +180,87 @@ semarto:has_update_query_text_value rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00001
-<https://github.com/jonathanvajda/SemanticArtifactOntology/ont00001> rdf:type owl:Class .
-
-
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00005
-<https://github.com/jonathanvajda/SemanticArtifactOntology/ont00005> rdf:type owl:Class .
-
-
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00007
-<https://github.com/jonathanvajda/SemanticArtifactOntology/ont00007> rdf:type owl:Class .
-
-
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00001
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000001
 semarto:ont000001 rdf:type owl:Class ;
-                 rdfs:subClassOf cco2:ont00000958 ;
-                 dcterms:bibliographicCitation "Braun, D. (2022). Propositions and Questions. In Chris Tillman and Adam Murray (Eds), Routledge Handbook of Propositions."@en , "https://doi.org/10.4324/9781315270500-34"^^xsd:anyURI ;
-                 rdfs:label "Interrogative Information Content Entity"@en ;
-                 skos:altLabel "Question"@en ;
-                 skos:definition "An Information Content Entity that is the object of some act of asking or wondering."@en ;
-                 skos:scopeNote "Strictly speaking, questions are the contents of interrogative sentences."@en ;
-                 cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
+                  rdfs:subClassOf cco2:ont00000958 ;
+                  dcterms:bibliographicCitation "Braun, D. (2022). Propositions and Questions. In Chris Tillman and Adam Murray (Eds), Routledge Handbook of Propositions."@en ,
+                                                "https://doi.org/10.4324/9781315270500-34"^^xsd:anyURI ;
+                  rdfs:label "Interrogative Information Content Entity"@en ;
+                  skos:altLabel "Question"@en ;
+                  skos:definition "An Information Content Entity that is the object of some act of asking or wondering."@en ;
+                  skos:scopeNote "Strictly speaking, questions are the contents of interrogative sentences."@en ;
+                  cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00002
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000002
 semarto:ont000002 rdf:type owl:Class ;
-                 rdfs:subClassOf <https://github.com/jonathanvajda/SemanticArtifactOntology/ont00001> ;
-                 dcterms:bibliographicCitation "Gruniger Fox (1995). The Role of Competency Questions in Enterprise Engineering. In: Rolstatas Benchmarking - Theory and Practice."@en ;
-                 rdfs:label "Competency Question"@en ;
-                 skos:altLabel "CQ"@en ;
-                 skos:definition "An Interrogative Information Content Entity that is expressed in natural language, that is designed to assist in identifying what information is to be returned for some information system query (tell-and-ask service), with respect to whether a framework has coverage of the terms, relationships, and inferences to enable the query."@en ;
-                 skos:scopeNote "A competency question is typically used to provide a benchmark for what queries some information system is to handle and what vocabularies and taxonomies are relevant to answer the user's question."@en ;
-                 cco2:ont00001753 "CQ"@en ;
-                 cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
+                  rdfs:subClassOf semarto:ont000001 ;
+                  dcterms:bibliographicCitation "Gruniger Fox (1995). The Role of Competency Questions in Enterprise Engineering. In: Rolstatas Benchmarking - Theory and Practice."@en ;
+                  rdfs:label "Competency Question"@en ;
+                  skos:altLabel "CQ"@en ;
+                  skos:definition "An Interrogative Information Content Entity that is expressed in natural language, that is designed to assist in identifying what information is to be returned for some information system query (tell-and-ask service), with respect to whether a framework has coverage of the terms, relationships, and inferences to enable the query."@en ;
+                  skos:scopeNote "A competency question is typically used to provide a benchmark for what queries some information system is to handle and what vocabularies and taxonomies are relevant to answer the user's question."@en ;
+                  cco2:ont00001753 "CQ"@en ;
+                  cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00003
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000003
 semarto:ont000003 rdf:type owl:Class ;
-                 rdfs:subClassOf <https://github.com/jonathanvajda/SemanticArtifactOntology/ont00001> ;
-                 dcterms:bibliographicCitation "The Department of Defense Architecture Framework (DoDAF), Version 2.0 (2009). Volume 1, 43-44."@en ;
-                 rdfs:label "Decision Support Question"@en ;
-                 skos:altLabel "DSQ" ;
-                 skos:definition "An Interrogative Information Content Entity that is expressed in natural language, that is designed to assist in identifying critical information requirements (CIRs) for making decisions regarding mission essential tasks (METs)."@en ;
-                 skos:scopeNote "A decision support question may involve one or many competency questions, which, when considered as a collection, are relevant for enabling a decision-maker to perform their METs."@en ;
-                 cco2:ont00001753 "DSQ"@en ;
-                 cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
+                  rdfs:subClassOf semarto:ont000001 ;
+                  dcterms:bibliographicCitation "The Department of Defense Architecture Framework (DoDAF), Version 2.0 (2009). Volume 1, 43-44."@en ;
+                  rdfs:label "Decision Support Question"@en ;
+                  skos:altLabel "DSQ" ;
+                  skos:definition "An Interrogative Information Content Entity that is expressed in natural language, that is designed to assist in identifying critical information requirements (CIRs) for making decisions regarding mission essential tasks (METs)."@en ;
+                  skos:scopeNote "A decision support question may involve one or many competency questions, which, when considered as a collection, are relevant for enabling a decision-maker to perform their METs."@en ;
+                  cco2:ont00001753 "DSQ"@en ;
+                  cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00004
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000004
 semarto:ont000004 rdf:type owl:Class ;
-                 rdfs:subClassOf cco2:ont00000958 ;
-                 rdfs:label "Mermaid Diagram"@en ;
-                 cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
+                  rdfs:subClassOf cco2:ont00000958 ;
+                  rdfs:label "Mermaid Diagram"@en ;
+                  cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00005
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000005
 semarto:ont000005 rdf:type owl:Class ;
-                 rdfs:subClassOf <https://github.com/jonathanvajda/SemanticArtifactOntology/ont00001> ;
-                 rdfs:label "SQL Query"@en ;
-                 skos:definition "An Interrogative Information Content Entity that is expressed in the syntax prescribed by the Structured Query Language specifications."@en ;
-                 cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
+                  rdfs:subClassOf semarto:ont000001 ;
+                  rdfs:label "SQL Query"@en ;
+                  skos:definition "An Interrogative Information Content Entity that is expressed in the syntax prescribed by the Structured Query Language specifications."@en ;
+                  cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00006
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000006
 semarto:ont000006 rdf:type owl:Class ;
-                 rdfs:subClassOf <https://github.com/jonathanvajda/SemanticArtifactOntology/ont00005> ;
-                 rdfs:label "SQL Update Query"@en ;
-                 cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
+                  rdfs:subClassOf semarto:ont000005 ;
+                  rdfs:label "SQL Update Query"@en ;
+                  cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00007
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000007
 semarto:ont000007 rdf:type owl:Class ;
-                 rdfs:subClassOf <https://github.com/jonathanvajda/SemanticArtifactOntology/ont00001> ;
-                 rdfs:label "SPARQL Query"@en ;
-                 skos:definition "An Interrogative Information Content Entity that is expressed in the syntax prescribed by the SPARQL Protocol and RDF Query Language specifications."@en ;
-                 cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
+                  rdfs:subClassOf semarto:ont000001 ;
+                  rdfs:label "SPARQL Query"@en ;
+                  skos:definition "An Interrogative Information Content Entity that is expressed in the syntax prescribed by the SPARQL Protocol and RDF Query Language specifications."@en ;
+                  cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00008
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000008
 semarto:ont000008 rdf:type owl:Class ;
-                 rdfs:subClassOf <https://github.com/jonathanvajda/SemanticArtifactOntology/ont00007> ;
-                 rdfs:label "SPARQL Update Query"@en ;
-                 skos:definition "A SPARQL query that requests a change in data assertions stored by an information system."@en ;
-                 cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
+                  rdfs:subClassOf semarto:ont000007 ;
+                  rdfs:label "SPARQL Update Query"@en ;
+                  skos:definition "A SPARQL query that requests a change in data assertions stored by an information system."@en ;
+                  cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
-###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont00009
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000009
 semarto:ont000009 rdf:type owl:Class ;
-                 rdfs:subClassOf cco2:ont00000965 ;
-                 rdfs:label "Business Rule"@en ;
-                 skos:altLabel "Decision Logic" ;
-                 skos:definition "A Directive Information Content Entity that is designed to direct planned processes performed by an organization and is either an Algorithm or a Performance Specification."@en ;
-                 cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
+                  rdfs:subClassOf cco2:ont00000965 ;
+                  rdfs:label "Business Rule"@en ;
+                  skos:altLabel "Decision Logic" ;
+                  skos:definition "A Directive Information Content Entity that is designed to direct planned processes performed by an organization and is either an Algorithm or a Performance Specification."@en ;
+                  cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
 ###  https://www.commoncoreontologies.org/ont00000958
