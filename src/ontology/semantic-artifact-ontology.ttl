@@ -280,9 +280,9 @@ semarto:ont000004 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000005
 semarto:ont000005 rdf:type owl:Class ;
-                  rdfs:subClassOf semarto:ont000001 ;
+                  rdfs:subClassOf semarto:ont000016 ;
                   rdfs:label "SQL Query"@en ;
-                  skos:definition "An Interrogative Information Content Entity that is expressed in the syntax prescribed by the Structured Query Language specifications."@en ;
+                  skos:definition "A Database Query that is expressed in the syntax prescribed by the Structured Query Language specifications."@en ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
@@ -296,9 +296,9 @@ semarto:ont000006 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000007
 semarto:ont000007 rdf:type owl:Class ;
-                  rdfs:subClassOf semarto:ont000001 ;
+                  rdfs:subClassOf semarto:ont000016 ;
                   rdfs:label "SPARQL Query"@en ;
-                  skos:definition "An Interrogative Information Content Entity that is expressed in the syntax prescribed by the SPARQL Protocol and RDF Query Language specifications."@en ;
+                  skos:definition "A Database Query that is expressed in the syntax prescribed by the SPARQL Protocol and RDF Query Language specifications."@en ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 
@@ -323,6 +323,12 @@ semarto:ont000009 rdf:type owl:Class ;
                   skos:definition "A Directive Information Content Entity that is designed to direct planned processes performed by an organization and is either an Algorithm or a Performance Specification."@en ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
+###  https://github.com/jonathanvajda/SemanticArtifactOntology/ont000016
+semarto:ont000016 rdf:type owl:Class ;
+                  rdfs:subClassOf semarto:ont000001 ;
+                  rdfs:label "Database Query"@en ;
+                  skos:definition "An Interrogative Information Content Entity that is expressed in the syntax prescribed some query language specification."@en ;
+                  cco2:ont00001760 <https://github.com/jonathanvajda/SemanticArtifactOntology> .
 
 ###  https://www.commoncoreontologies.org/ont00000127
 cco2:ont00000127 rdf:type owl:Class .
