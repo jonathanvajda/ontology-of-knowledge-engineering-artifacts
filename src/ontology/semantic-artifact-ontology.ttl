@@ -330,7 +330,119 @@ okea:ont000016 rdf:type owl:Class ;
                   skos:definition "An Interrogative Information Content Entity that is expressed in the syntax prescribed some query language specification."@en ;
                   cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
 
-
+okea:ont000017 a owl:NamedIndividual;
+    rdfs:label "World Wide Web Consortium"@en;
+    skos:definition "An organization whose purpose is to create technical standards for the World Wide Web."@en;
+    a cco2:ont00001180;
+    cco2:ont00001760 okea:OntologyOfKnowledgeEngineeringArtifacts;
+    rdfs:seeAlso "https://www.w3.org/"@en ;
+    dcterms:bibliographicCitation "https://en.wikipedia.org/wiki/World_Wide_Web_Consortium".
+okea:ont000018 a owl:Class;
+    rdfs:label "W3C standard"@en;
+    skos:definition "A Reference System that is about a set of technical standards for the World Wide Web (W3C)."@en;
+    rdfs:subClassOf cco2:ont00000398;
+    cco2:ont00001760 okea:OntologyOfKnowledgeEngineeringArtifacts.
+okea:ont000019 a owl:NamedIndividual;
+    rdfs:label "RDF Schema 1.1"@en;
+    a okea:ont000018;
+    cco2:ont00001760 <https://www.w3.org/TR/rdf-schema>;
+    dcterms:bibliographicCitation "https://www.w3.org/TR/rdf-schema/".
+okea:ont000020 a owl:NamedIndividual;
+    rdfs:label "RDF Syntax 1.1"@en;
+    a okea:ont000018;
+    cco2:ont00001760 <https://www.w3.org/TR/rdf11-concepts>;
+    dcterms:bibliographicCitation "https://www.w3.org/TR/rdf11-concepts/".
+okea:ont000021 a owl:NamedIndividual;
+    rdfs:label "OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax"@en;
+    a okea:ont000018;
+    cco2:ont00001760 <https://www.w3.org/TR/2012/REC-owl2-syntax-20121211>;
+    dcterms:bibliographicCitation "https://www.w3.org/TR/2012/REC-owl2-syntax-20121211/".
+<http://semanticscience.org/resource/SIO_000331> a owl:Class;
+    rdfs:label "OWL ontology"@en;
+    skos:definition "An OWL ontology is an ontology as specified by the W3C OWL specification."@en;
+    rdfs:subClassOf obo:IAO_8000000;
+    cco2:ont00001760 <http://semanticscience.org/ontology/sio.owl>.
+<http://semanticscience.org/resource/SIO_000622> a owl:Class;
+    rdfs:label "RDFS ontology"@en;
+    skos:definition "An RDFS ontology is an ontology that conforms to the syntax and semantics of the Resource Description Framework Schema (RDFS)."@en;
+    rdfs:subClassOf obo:IAO_8000000;
+    cco2:ont00001760 <http://semanticscience.org/ontology/sio.owl>.
+<http://semanticscience.org/resource/SIO_000623> a owl:Class;
+    rdfs:label "OBO ontology"@en;
+    skos:definition "An OBO ontology is an ontology document as specified by the Open Biological Ontology community."@en;
+    rdfs:subClassOf obo:IAO_8000000;
+    cco2:ont00001760 <http://semanticscience.org/ontology/sio.owl>.
+obo:IAO_8000000 a owl:Class;
+    rdfs:label "ontology module"@en;
+    skos:definition "A representational artifact that consists of a set of definitions of classes (types) and relations that describe a specific domain of reality"@en;
+    rdfs:subClassOf cco2:ont00000958;
+    cco2:ont00001760 <http://purl.obolibrary.org/obo/iao.owl>;
+    skos:altLabel "ontology file"@en.
+obo:IAO_8000003 a owl:Class;
+    rdfs:label "main release ontology module"@en;
+    skos:definition "An ontology module that is intended to be the primary release product and the one consumed by the majority of tools."@en;
+    rdfs:subClassOf obo:IAO_8000000;
+    cco2:ont00001760 <http://purl.obolibrary.org/obo/iao.owl>.
+obo:IAO_8000002 a owl:Class;
+    rdfs:label "editors ontology module"@en;
+    skos:definition "An ontology module that is intended to be directly edited, typically managed in source control, and typically not intended for direct consumption by end-users."@en;
+    rdfs:subClassOf obo:IAO_8000000;
+    cco2:ont00001760 <http://purl.obolibrary.org/obo/iao.owl>;
+    skos:altLabel "source ontology module"@en.
+obo:OBI_0001755 a owl:Class;
+    rdfs:label "selection criterion"@en;
+    skos:definition "A directive information entity which defines and states a principle of standard by which selection process may take place."@en;
+    rdfs:subClassOf cco2:ont00000965;
+    cco2:ont00001760 <http://purl.obolibrary.org/obo/obi.owl>;
+    obo:IAO_0000114 <http://purl.obolibrary.org/obo/IAO_0000122>.
+obo:OBI_0500026 a owl:Class;
+    rdfs:label "eligibility criterion"@en;
+    skos:definition "An eligibility criterion (rule) is_a selection criterion which defines and states the requirements (positive or negative) for an entity to be considered as suitable for a given task or participation in a process."@en;
+    rdfs:subClassOf obo:OBI_0001755;
+    cco2:ont00001760 <http://purl.obolibrary.org/obo/obi.owl>;
+    obo:IAO_0000114 <http://purl.obolibrary.org/obo/IAO_0000122>.
+okea:ont000022 a owl:Class;
+    rdfs:label "National Security Ontology Foundry ontology"@en;
+    skos:definition "An ontology module that is specified by the standards of the National Security Ontology Foundry community."@en;
+    rdfs:subClassOf obo:IAO_8000000;
+    cco2:ont00001760 okea:OntologyOfKnowledgeEngineeringArtifacts.
+okea:ont000023 a owl:Class;
+    rdfs:label "Act of Information System Querying"@en;
+    skos:definition "An Act of Requesting Information that prescribes some information to perform some finding and delivering of information by means of a formal query."@en;
+    rdfs:subClassOf cceo:ActOfRequestingInformation;
+    cco2:ont00001760 okea:OntologyOfKnowledgeEngineeringArtifacts.
+okea:ont000024 a owl:Class;
+    rdfs:label "Information System Query Result"@en;
+    skos:definition "An Information Content Entity that is found or delivered (or the lack thereof) according to an Act of Information System Querying."@en;
+    rdfs:subClassOf cco2:ont00000958;
+    cco2:ont00001760 okea:OntologyOfKnowledgeEngineeringArtifacts.
+okea:ont000025 a owl:Class;
+    rdfs:label "recommendation textual entity"@en ;
+    skos:definition "A textual entity that expresses the recommendations to use a resource, e.g. software."@en ;
+    rdfs:subClassOf obo:IAO_0000300;
+    cco2:ont00001760 okea:OntologyOfKnowledgeEngineeringArtifacts.
+obo:IAO_0000642 a owl:Class;
+    rdfs:label "requirements textual entity"@en ;
+    skos:definition "A textual entity that expresses the requirements necessary to use a resource, e.g. software."@en ;
+    rdfs:subClassOf obo:IAO_0000300;
+    cco2:ont00001760 <http://purl.obolibrary.org/obo/iao.owl>.
+obo:IAO_0000300 a owl:Class;
+    rdfs:label "textual entity"@en ;
+    skos:definition "A textual entity is a part of a manifestation (FRBR sense), a generically dependent continuant whose concretizations are patterns of glyphs intended to be interpreted as words, formulas, etc."@en ;
+    rdfs:subClassOf cco2:ont00000958;
+    cco2:ont00001760 <http://purl.obolibrary.org/obo/iao.owl>;
+    obo:IAO_0000114 "http://purl.obolibrary.org/obo/IAO_0000123".
+okea:representation_conforms_to_specification a owl:AnnotationProperty;
+    rdfs:label "representation conforms to specification"@en ;
+    skos:definition "x representation conforms to specification y iff x is a representation, y is a specification (directive information content entity), and y specifies x, and x exemplifies the specification y."@en ;
+    cco2:ont00001760 okea:OntologyOfKnowledgeEngineeringArtifacts.
+okea:ont000026 a owl:ObjectProperty;
+    rdfs:label "has selection criterion"@en ;
+    skos:definition "x has selection criterion y iff x is a directive information content entity (i.e., a standard or principle), y is a selection criterion, y delineates some necessary or sufficient condition z, and x is about z."@en ;
+    cco2:ont00001760 okea:OntologyOfKnowledgeEngineeringArtifacts.
+okea:ont000027 a owl:ObjectProperty;
+    rdfs:label "is selection criterion of"@en ;
+    skos:definition "x is selection criteria of y iff y has selection criterion x."@en ;
 
 
 
