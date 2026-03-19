@@ -1,0 +1,5 @@
+https://www.commoncoreontologies.org/ont00000636 # Act of Appraisal
+https://www.commoncoreontologies.org/ont00000402 # Act of Communication
+https://www.commoncoreontologies.org/ont00001912 # uses reference system
+https://www.commoncoreontologies.org/ont00001997 # is reference system of
+https://www.commoncoreontologies.org/ont00000398 # Reference System

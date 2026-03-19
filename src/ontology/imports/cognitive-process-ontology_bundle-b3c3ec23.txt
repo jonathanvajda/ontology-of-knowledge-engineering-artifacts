@@ -1,3 +1,4 @@
 http://www.ontologyrepository.com/CommonCoreOntologies/ActOfInvestigation # Act of Investigation
 http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcess # Cognitive Process
 http://www.ontologyrepository.com/CommonCoreOntologies/SemanticComparing # Semantic Comparing
+http://www.ontologyrepository.com/CommonCoreOntologies/ActOfEvaluation # Act of Evaluation
