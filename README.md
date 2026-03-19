@@ -1,4 +1,4 @@
-# Semantic Artifact Ontology
+# Ontology of Knowledge Engineering Artifacts
 An ontology that represents semantic artifacts, especially those information entities used in knowledge engineering devops.
 
 ## Import Diagram
