@@ -139,20 +139,26 @@ okea:ont000013 rdf:type owl:ObjectProperty ;
 
 ###  https://github.com/jonathanvajda/okea/ont000014
 okea:ont000014 rdf:type owl:ObjectProperty ;
+               rdfs:domain cco2:ont00000958 ;
+               rdfs:range cco2:ont00000958 ;
                rdfs:label "has formalization"@en ;
-               skos:definition "x has competency question y iff x" ;
+               skos:definition "x has formalization y iff x is an information content entity, y is an expression in formal language, such that the formal expression logically encodes the conditions defined by the information content entity."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
 
 
 ###  https://github.com/jonathanvajda/okea/ont000015
 okea:ont000015 rdf:type owl:ObjectProperty ;
+               rdfs:domain cco2:ont00000958 ;
+               rdfs:range cco2:ont00000958 ;
                rdfs:label "is formalization of"@en ;
-               skos:definition "x is competency question of y iff x..." ;
+               skos:definition "x is formalization of y iff y has formalization x"@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
 
 
 ###  https://github.com/jonathanvajda/okea/ont000026
 okea:ont000026 rdf:type owl:ObjectProperty ;
+               rdfs:domain cco2:ont00000965 ;
+               rdfs:range obo:OBI_0001755 ;
                rdfs:label "has selection criterion"@en ;
                skos:definition "x has selection criterion y iff x is a directive information content entity (i.e., a standard or principle), y is a selection criterion, y delineates some necessary or sufficient condition z, and x is about z."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -160,6 +166,8 @@ okea:ont000026 rdf:type owl:ObjectProperty ;
 
 ###  https://github.com/jonathanvajda/okea/ont000027
 okea:ont000027 rdf:type owl:ObjectProperty ;
+               rdfs:domain obo:OBI_0001755 ;
+               rdfs:range cco2:ont00000965 ;
                rdfs:label "is selection criterion of"@en ;
                skos:definition "x is selection criteria of y iff y has selection criterion x."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
