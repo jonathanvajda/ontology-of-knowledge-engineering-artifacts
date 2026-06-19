@@ -1,0 +1,19 @@
+flowchart TD
+    Ontology["ont1: ontology module"]
+    Profile["OWL 2 EL profile<br/>named individual of Web Ontology Language Profile"]
+    ValidateProfile["act1: act of ontology profile validating"]
+    ProfileReport["report1: profile validation result"]
+    Materialize["act2: act of ontology materializing"]
+    Reasoner["reasoner1: ontology reasoner"]
+    MaterializedTriples["triples1: materialized triple set"]
+    Release["release.owl: ontology release artifact"]
+
+    Profile -- "prescribes conformance target for" --> ValidateProfile
+    ValidateProfile -- "has input" --> Ontology
+    ValidateProfile -- "has output" --> ProfileReport
+    Materialize -- "has input" --> Ontology
+    Materialize -- "has participant" --> Reasoner
+    Materialize -- "has output" --> MaterializedTriples
+    Release -- "has part" --> MaterializedTriples
+    Release -- "conforms to" --> Profile
+

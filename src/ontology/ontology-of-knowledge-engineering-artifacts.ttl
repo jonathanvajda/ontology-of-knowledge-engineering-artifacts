@@ -1066,12 +1066,27 @@ okea:ont000082 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000083
 okea:ont000083 rdf:type owl:Class ;
-               rdfs:subClassOf cceo:OntologyEditingSoftwareApplication ;
-               rdfs:label "Ontology Editor"@en ;
-               skos:altLabel "Modeling Tool"@en ;
-               skos:definition "An Ontology Editing Software Application that is designed to support creating, editing, inspecting, validating, or publishing ontology artifacts."@en ;
-               skos:example "Protege, TopBraid Composer"@en ;
-               skos:scopeNote "A desktop or web application used by knowledge engineers to design, build, and test ontologies."@en ;
+               rdfs:subClassOf cco2:ont00001158 ;
+               dcterms:bibliographicCitation "https://robot.obolibrary.org/rename"^^xsd:anyURI ;
+               rdfs:label "Act of Ontology Internationalized Resource Identifier Renaming"@en ;
+               skos:altLabel "Act of Ontology IRI Renaming"@en ,
+                             "ROBOT Rename Command"@en ,
+                             "Rename"@en ;
+               skos:definition "An Act of Data Transformation that replaces one or more Internationalized Resource Identifiers used by ontology entities while preserving the intended semantic content of the ontology as far as specified by a renaming map or renaming rule."@en ;
+               skos:example "Using a command-line ontology tool to replace a set of obsolete class IRIs with new class IRIs throughout an ontology module."@en ;
+               skos:scopeNote "This process changes entity identifiers in bulk and is distinct from adding, removing, or changing human-readable labels."@en ;
+               cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
+
+###  https://github.com/jonathanvajda/okea/ont000084
+okea:ont000084 rdf:type owl:Class ;
+               rdfs:subClassOf okea:ont000033 ;
+               dcterms:bibliographicCitation "https://robot.obolibrary.org/convert"^^xsd:anyURI ;
+               rdfs:label "Act of Ontology Format Converting"@en ;
+               skos:altLabel "Convert"@en ,
+                             "ROBOT Convert Command"@en ;
+               skos:definition "A Graph Serialization Process that has as input a serialized ontology module in one format and has as output a serialized ontology module in a different ontology or graph serialization format."@en ;
+               skos:example "Running `robot convert --input annotated.owl --output results/annotated.obo` to save an ontology in another format."@en ;
+               skos:scopeNote "This process is a specialized act of graph serialization because the output is a new serialization of ontology content in a target format."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
 
 
@@ -1606,33 +1621,6 @@ okea:ont000129 rdf:type owl:Class ;
                skos:definition "An Act of Data Transformation that has as input two or more ontology modules or an ontology module with its import closure and has as output a single ontology module that includes axioms from the inputs according to a merge specification."@en ;
                skos:example "Running `robot merge --input edit.owl --input edit2.owl --output results/merged2.owl` to produce a merged ontology module."@en ;
                skos:scopeNote "This process concerns producing a merged ontology module or release product; it should not be confused with asserting that the input ontology modules are identical or interchangeable."@en ;
-               cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
-
-
-###  https://github.com/jonathanvajda/okea/ont000130
-okea:ont000130 rdf:type owl:Class ;
-               rdfs:subClassOf cco2:ont00001158 ;
-               dcterms:bibliographicCitation "https://robot.obolibrary.org/rename"^^xsd:anyURI ;
-               rdfs:label "Act of Ontology Internationalized Resource Identifier Renaming"@en ;
-               skos:altLabel "Act of Ontology IRI Renaming"@en ,
-                             "ROBOT Rename Command"@en ,
-                             "Rename"@en ;
-               skos:definition "An Act of Data Transformation that replaces one or more Internationalized Resource Identifiers used by ontology entities while preserving the intended semantic content of the ontology as far as specified by a renaming map or renaming rule."@en ;
-               skos:example "Using a command-line ontology tool to replace a set of obsolete class IRIs with new class IRIs throughout an ontology module."@en ;
-               skos:scopeNote "This process changes entity identifiers in bulk and is distinct from adding, removing, or changing human-readable labels."@en ;
-               cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
-
-
-###  https://github.com/jonathanvajda/okea/ont000131
-okea:ont000131 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000033 ;
-               dcterms:bibliographicCitation "https://robot.obolibrary.org/convert"^^xsd:anyURI ;
-               rdfs:label "Act of Ontology Format Converting"@en ;
-               skos:altLabel "Convert"@en ,
-                             "ROBOT Convert Command"@en ;
-               skos:definition "A Graph Serialization Process that has as input a serialized ontology module in one format and has as output a serialized ontology module in a different ontology or graph serialization format."@en ;
-               skos:example "Running `robot convert --input annotated.owl --output results/annotated.obo` to save an ontology in another format."@en ;
-               skos:scopeNote "This process is a specialized act of graph serialization because the output is a new serialization of ontology content in a target format."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
 
 

@@ -1,0 +1,22 @@
+flowchart TD
+    SourceData["legacy.csv: source data file"]
+    UpliftConfig["uplift.ttl: semantic uplift configuration"]
+    UpliftAct["act1: semantic uplift process"]
+    RDFGraph["graph1: RDF graph"]
+    ShapeFile["shapes.ttl: SHACL shape file"]
+    ValidationAct["act2: graph validation process"]
+    ValidationReport["report1: validation report"]
+    TripleStore["store1: triple store"]
+    LoadAct["act3: graph loading process"]
+    QueryEndpoint["endpoint1: SPARQL endpoint"]
+
+    UpliftConfig -- "prescribes" --> UpliftAct
+    UpliftAct -- "has input" --> SourceData
+    UpliftAct -- "has output" --> RDFGraph
+    ShapeFile -- "prescribes constraints for" --> ValidationAct
+    ValidationAct -- "has input" --> RDFGraph
+    ValidationAct -- "has input" --> ShapeFile
+    ValidationAct -- "has output" --> ValidationReport
+    LoadAct -- "has input" --> RDFGraph
+    LoadAct -- "has participant" --> TripleStore
+    TripleStore -- "provides access through" --> QueryEndpoint

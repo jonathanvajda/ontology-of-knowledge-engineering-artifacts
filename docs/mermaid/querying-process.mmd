@@ -1,0 +1,19 @@
+flowchart TD
+    QueryDirective["q1: SPARQL query<br/>instance of SPARQL Query"]
+    QueryText["qtxt1: query text literal<br/>SELECT ?term WHERE { ... }"]
+    QueryProcess["act1: Act of Information System Querying"]
+    TripleStore["db1: triple store<br/>instance of Triple Store"]
+    Dataset["graph1: RDF dataset"]
+    Return["ret1: query result<br/>instance of Information System Query Result"]
+    Binding["bind1: variable binding set"]
+
+    QueryDirective -- "has SPARQL query text value" --> QueryText
+    QueryDirective -- "prescribes" --> QueryProcess
+    QueryProcess -- "has input" --> QueryDirective
+    QueryProcess -- "has participant" --> TripleStore
+    TripleStore -- "stores" --> Dataset
+    QueryProcess -- "queries" --> Dataset
+    QueryProcess -- "has output" --> Return
+    Return -- "has continuant part" --> Binding
+    Binding -- "conforms to" --> QueryDirective
+

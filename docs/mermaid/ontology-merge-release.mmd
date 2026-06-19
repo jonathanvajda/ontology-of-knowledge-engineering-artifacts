@@ -1,0 +1,22 @@
+flowchart TD
+    EditModule["edit.owl: editors ontology module"]
+    ImportA["import-a.owl: ontology module"]
+    ImportB["import-b.owl: ontology module"]
+    MergeSpec["merge.yml: merge specification"]
+    MergeAct["act1: act of ontology merging"]
+    MergedModule["merged.owl: merged ontology module"]
+    ReasonAct["act2: act of ontology classification"]
+    ReleaseAct["act3: release packaging process"]
+    ReleaseArtifact["release.owl: ontology release artifact"]
+
+    MergeSpec -- "prescribes" --> MergeAct
+    MergeAct -- "has input" --> EditModule
+    MergeAct -- "has input" --> ImportA
+    MergeAct -- "has input" --> ImportB
+    MergeAct -- "has output" --> MergedModule
+    ReasonAct -- "has input" --> MergedModule
+    ReasonAct -- "has output" --> MergedModule
+    ReleaseAct -- "has input" --> MergedModule
+    ReleaseAct -- "has output" --> ReleaseArtifact
+    ReleaseArtifact -- "is release product of" --> ReleaseAct
+

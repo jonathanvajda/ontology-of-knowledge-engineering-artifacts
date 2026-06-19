@@ -1,0 +1,29 @@
+flowchart TD
+    SourceOntology["edit.owl: editors ontology module"]
+    Repo["repo1: Git repository"]
+    PipelineConfig["workflow.yml: CI/CD pipeline configuration"]
+    PipelineRun["run1: CI/CD process"]
+    RobotMeasure["act1: act of ontology measuring<br/>using ROBOT"]
+    SparqlTests["act2: act of ontology verifying<br/>using SPARQL test suite"]
+    ShaclTests["act3: act of graph validating<br/>using SHACL shape file"]
+    ProfileValidation["act4: act of ontology profile validating"]
+    RobotMeasurement["m1: ROBOT measurement output"]
+    SparqlReport["m2: SPARQL verification result"]
+    ShaclReport["m3: validation report"]
+    ProfileReport["m4: profile validation result"]
+    Release["release.owl: ontology release artifact"]
+
+    Repo -- "has part" --> SourceOntology
+    PipelineConfig -- "prescribes" --> PipelineRun
+    PipelineRun -- "has input" --> SourceOntology
+    PipelineRun -- "has occurrent part" --> RobotMeasure
+    PipelineRun -- "has occurrent part" --> SparqlTests
+    PipelineRun -- "has occurrent part" --> ShaclTests
+    PipelineRun -- "has occurrent part" --> ProfileValidation
+    RobotMeasure -- "has output" --> RobotMeasurement
+    SparqlTests -- "has output" --> SparqlReport
+    ShaclTests -- "has output" --> ShaclReport
+    ProfileValidation -- "has output" --> ProfileReport
+    PipelineRun -- "has output" --> Release
+    Release -- "derived from" --> SourceOntology
+

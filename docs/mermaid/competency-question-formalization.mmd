@@ -1,0 +1,20 @@
+flowchart TD
+    CQ["cq1: competency question<br/>Which suppliers provide components to factory X?"]
+    NaturalText["cqText1: natural language question text"]
+    SPARQL["query1: SPARQL query"]
+    Return["ret1: query result"]
+    ODP["odp1: ontology design pattern<br/>Supplier-Component-Facility pattern"]
+    Mermaid["diag1: Mermaid diagram"]
+    PatternClass["class1: Supplier role"]
+    QueryAct["act1: Act of Information System Querying"]
+
+    CQ -- "has competency question text value" --> NaturalText
+    CQ -- "has formalization" --> SPARQL
+    CQ -- "has formalization" --> ODP
+    ODP -- "has mermaid diagram" --> Mermaid
+    Mermaid -- "represents" --> PatternClass
+    SPARQL -- "is about" --> PatternClass
+    QueryAct -- "has input" --> SPARQL
+    QueryAct -- "has output" --> Return
+    Return -- "answers" --> CQ
+
