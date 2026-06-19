@@ -1,5 +1,10 @@
-function renderMermaidDiagrams() {
+function renderMermaidDiagrams(attempt) {
   if (typeof mermaid === "undefined") {
+    if (attempt < 10) {
+      window.setTimeout(function () {
+        renderMermaidDiagrams(attempt + 1);
+      }, 100);
+    }
     return;
   }
 
@@ -23,7 +28,9 @@ function renderMermaidDiagrams() {
 }
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", renderMermaidDiagrams);
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMermaidDiagrams(0);
+  });
 } else {
-  renderMermaidDiagrams();
+  renderMermaidDiagrams(0);
 }

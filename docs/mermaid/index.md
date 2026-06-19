@@ -15,7 +15,7 @@ The diagrams are framed as paradigmatic instances connected by relations. They a
 
 Source: [querying-process.mmd](querying-process.mmd)
 
-```mermaid
+<div class="mermaid">
 flowchart TD
     QueryDirective["q1: SPARQL query<br/>instance of SPARQL Query"]
     QueryText["qtxt1: query text literal<br/>SELECT ?term WHERE { ... }"]
@@ -34,13 +34,13 @@ flowchart TD
     QueryProcess -- "has output" --> Return
     Return -- "has continuant part" --> Binding
     Binding -- "conforms to" --> QueryDirective
-```
+</div>
 
 ## Competency Question Formalization
 
 Source: [competency-question-formalization.mmd](competency-question-formalization.mmd)
 
-```mermaid
+<div class="mermaid">
 flowchart TD
     CQ["cq1: competency question<br/>Which suppliers provide components to factory X?"]
     NaturalText["cqText1: natural language question text"]
@@ -60,13 +60,13 @@ flowchart TD
     QueryAct -- "has input" --> SPARQL
     QueryAct -- "has output" --> Return
     Return -- "answers" --> CQ
-```
+</div>
 
 ## CI/CD Ontology Release
 
 Source: [cicd-ontology-release.mmd](cicd-ontology-release.mmd)
 
-```mermaid
+<div class="mermaid">
 flowchart TD
     SourceOntology["edit.owl: editors ontology module"]
     Repo["repo1: Git repository"]
@@ -95,13 +95,13 @@ flowchart TD
     ProfileValidation -- "has output" --> ProfileReport
     PipelineRun -- "has output" --> Release
     Release -- "derived from" --> SourceOntology
-```
+</div>
 
 ## Ontology Merge and Release Product
 
 Source: [ontology-merge-release.mmd](ontology-merge-release.mmd)
 
-```mermaid
+<div class="mermaid">
 flowchart TD
     EditModule["edit.owl: editors ontology module"]
     ImportA["import-a.owl: ontology module"]
@@ -123,13 +123,13 @@ flowchart TD
     ReleaseAct -- "has input" --> MergedModule
     ReleaseAct -- "has output" --> ReleaseArtifact
     ReleaseArtifact -- "is release product of" --> ReleaseAct
-```
+</div>
 
 ## Profile Validation and Materialization
 
 Source: [profile-validation-materialization.mmd](profile-validation-materialization.mmd)
 
-```mermaid
+<div class="mermaid">
 flowchart TD
     Ontology["ont1: ontology module"]
     Profile["OWL 2 EL profile<br/>named individual of Web Ontology Language Profile"]
@@ -148,13 +148,13 @@ flowchart TD
     Materialize -- "has output" --> MaterializedTriples
     Release -- "has part" --> MaterializedTriples
     Release -- "conforms to" --> Profile
-```
+</div>
 
 ## Semantic Uplift, Validation, and Publication
 
 Source: [semantic-uplift-validation-publication.mmd](semantic-uplift-validation-publication.mmd)
 
-```mermaid
+<div class="mermaid">
 flowchart TD
     SourceData["legacy.csv: source data file"]
     UpliftConfig["uplift.ttl: semantic uplift configuration"]
@@ -177,4 +177,4 @@ flowchart TD
     LoadAct -- "has input" --> RDFGraph
     LoadAct -- "has participant" --> TripleStore
     TripleStore -- "provides access through" --> QueryEndpoint
-```
+</div>
