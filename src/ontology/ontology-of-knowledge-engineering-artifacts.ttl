@@ -233,6 +233,42 @@ obo:OBI_0001755 rdf:type owl:Class .
 cceo:ActOfRequestingInformation rdf:type owl:Class .
 
 
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ComputerProgramExecution
+cceo:ComputerProgramExecution rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DigitalFileProcess
+cceo:DigitalFileProcess rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ModelingProcess
+cceo:ModelingProcess rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ApplicationSoftware
+cceo:ApplicationSoftware rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ComputerProgram
+cceo:ComputerProgram rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DatabaseSoftwareApplication
+cceo:DatabaseSoftwareApplication rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/NetworkServer
+cceo:NetworkServer rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/OntologyEditingSoftwareApplication
+cceo:OntologyEditingSoftwareApplication rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SoftwareStack
+cceo:SoftwareStack rdf:type owl:Class .
+
+
 ###  https://github.com/jonathanvajda/okea/ont000001
 okea:ont000001 rdf:type owl:Class ;
                rdfs:subClassOf cco2:ont00000958 ;
@@ -388,18 +424,19 @@ okea:ont000025 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000028
 okea:ont000028 rdf:type owl:Class ;
-               rdfs:subClassOf obo:BFO_0000015 ;
+               rdfs:subClassOf cco2:ont00000366 ;
                rdfs:label "Knowledge Engineering Process"@en ;
-               skos:definition "A process that has as output, input, or specified objective some artifact used to develop, maintain, validate, publish, query, or operate an ontology, knowledge graph, semantic data layer, or related formal knowledge representation."@en ;
+               skos:definition "An Act of Information Processing that has as output, input, or specified objective some artifact used to develop, maintain, validate, publish, query, or operate an ontology, knowledge graph, semantic data layer, or related formal knowledge representation."@en ;
                skos:scopeNote "The update note asks to represent planned processes as distinct from plans, directives, syntaxes, specifications, files, and outputs used in knowledge engineering."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
 
 
 ###  https://github.com/jonathanvajda/okea/ont000029
 okea:ont000029 rdf:type owl:Class ;
-               rdfs:subClassOf cco2:ont00000958 ;
-               rdfs:label "Knowledge Engineering Software Artifact"@en ;
-               skos:definition "An Information Content Entity that is concretized in software and is designed to participate in developing, transforming, validating, querying, reasoning over, visualizing, or operating semantic information resources."@en ;
+               rdfs:subClassOf cceo:ComputerProgram ;
+               rdfs:label "Knowledge Engineering Computer Program"@en ;
+               skos:altLabel "Knowledge Engineering Software Artifact"@en ;
+               skos:definition "A Computer Program that is designed to participate in developing, transforming, validating, querying, reasoning over, visualizing, or operating semantic information resources."@en ;
                skos:example "Apache Jena RDF Writer"@en ;
                skos:scopeNote "The table includes serializers, reasoners, ontology editors, terminology server components, semantic middleware, and visualizers as software or software components."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -438,13 +475,14 @@ okea:ont000032 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000033
 okea:ont000033 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000028 ;
+               rdfs:subClassOf cceo:DigitalFileProcess ;
                dcterms:bibliographicCitation "https://www.w3.org/TR/turtle/"^^xsd:anyURI ;
-               rdfs:label "Act of Serializing a Graph"@en ;
-               skos:altLabel "Graph Dumping"@en ,
+               rdfs:label "Graph Serialization Process"@en ;
+               skos:altLabel "Act of Serializing a Graph"@en ,
+                             "Graph Dumping"@en ,
                              "Marshalling"@en ,
                              "Serialization Process"@en ;
-               skos:definition "A Knowledge Engineering Process that has as output a linear digital representation of an in-memory graph or graph-like information structure according to a serialization syntax specification."@en ;
+               skos:definition "A Digital File Process that has as output a linear digital representation of an in-memory graph or graph-like information structure according to a serialization syntax specification."@en ;
                skos:example "Exporting a graph to a `.ttl` file"@en ;
                skos:scopeNote "The technical operation of parsing an in-memory graph structure into a linear stream of characters/bytes."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -452,13 +490,13 @@ okea:ont000033 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000034
 okea:ont000034 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000029 ;
+               rdfs:subClassOf cceo:ApplicationSoftware ;
                dcterms:bibliographicCitation "https://www.w3.org/TR/rdf11-concepts/"^^xsd:anyURI ;
                rdfs:label "Graph Serializer"@en ;
                skos:altLabel "Graph Exporter"@en ,
                              "Parser-Writer"@en ,
                              "Serializer"@en ;
-               skos:definition "A Knowledge Engineering Software Artifact that is designed to create a serialized representation of a graph or graph-like information structure."@en ;
+               skos:definition "An Application Software that is designed to create a serialized representation of a graph or graph-like information structure."@en ;
                skos:example "Apache Jena RDF Writer"@en ;
                skos:scopeNote "The software component or module responsible for turning an active programmatic graph model into written text files."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -805,11 +843,11 @@ okea:ont000059 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000060
 okea:ont000060 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000029 ;
+               rdfs:subClassOf cceo:NetworkServer ;
                dcterms:bibliographicCitation "https://www.w3.org/TR/sparql11-overview/"^^xsd:anyURI ;
                rdfs:label "SPARQL Protocol and Resource Description Framework Query Language Endpoint"@en ;
                skos:altLabel "Semantic API URL"@en ;
-               skos:definition "A Knowledge Engineering Software Artifact that provides a network-accessible service designed to receive SPARQL protocol requests and return query results or update responses."@en ;
+               skos:definition "A Network Server that provides a network-accessible service designed to receive SPARQL protocol requests and return query results or update responses."@en ;
                skos:example "`https://dbpedia.org/sparql`"@en ;
                skos:scopeNote "A publicly or privately accessible web service URL that receives and processes incoming SPARQL queries via HTTP protocol."@en ;
                cco2:ont00001753 "API"@en ,
@@ -819,11 +857,11 @@ okea:ont000060 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000061
 okea:ont000061 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000029 ;
+               rdfs:subClassOf cceo:DatabaseSoftwareApplication ;
                dcterms:bibliographicCitation "https://www.w3.org/TR/rdf11-concepts/"^^xsd:anyURI ;
                rdfs:label "Triple Store"@en ;
                skos:altLabel "RDF Database"@en ;
-               skos:definition "A Knowledge Engineering Software Artifact that is designed to store, index, manage, and answer queries over RDF triples."@en ;
+               skos:definition "A Database Software Application that is designed to store, index, manage, and answer queries over RDF triples."@en ;
                skos:example "GraphDB, Blazegraph"@en ;
                skos:scopeNote "A dedicated graph database optimized for indexing, storing, and evaluating RDF triple statements."@en ;
                cco2:ont00001753 "RDF"@en ;
@@ -845,12 +883,12 @@ okea:ont000062 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000063
 okea:ont000063 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000029 ;
+               rdfs:subClassOf cceo:ApplicationSoftware ;
                dcterms:bibliographicCitation "https://www.w3.org/TR/owl2-profiles/"^^xsd:anyURI ;
                rdfs:label "Ontology Reasoner"@en ;
                skos:altLabel "Inference Engine"@en ,
                              "Semantic Reasoner"@en ;
-               skos:definition "A Knowledge Engineering Software Artifact that is designed to compute logical consequences of ontology axioms, graph assertions, rules, or entailment regimes."@en ;
+               skos:definition "An Application Software that is designed to compute logical consequences of ontology axioms, graph assertions, rules, or entailment regimes."@en ;
                skos:example "HermiT, Pellet, Openllet"@en ;
                skos:scopeNote "A software module used to evaluate ontology rules, compute sub-class hierarchies, check consistency, and infer unstated assertions."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -885,10 +923,10 @@ okea:ont000065 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000066
 okea:ont000066 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000028 ;
+               rdfs:subClassOf cceo:ComputerProgramExecution ;
                rdfs:label "Dynamic Inference Process"@en ;
                skos:altLabel "On-the-fly Reasoning"@en ;
-               skos:definition "A Knowledge Engineering Process that computes logical consequences during query answering, validation, or application execution without first storing all inferred assertions as materialized triples."@en ;
+               skos:definition "A Computer Program Execution that computes logical consequences during query answering, validation, or application execution without first storing all inferred assertions as materialized triples."@en ;
                skos:example "Evaluation of class inheritance during a runtime query"@en ;
                skos:scopeNote "The system approach of computing implicit triples dynamically on-the-fly exactly when an application executes a query."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -896,11 +934,12 @@ okea:ont000066 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000067
 okea:ont000067 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000028 ;
-               rdfs:label "Act of Ontology Consistency Checking"@en ;
-               skos:altLabel "Consistency Check"@en ,
+               rdfs:subClassOf cceo:ComputerProgramExecution ;
+               rdfs:label "Ontology Consistency Checking Process"@en ;
+               skos:altLabel "Act of Ontology Consistency Checking"@en ,
+                             "Consistency Check"@en ,
                              "Logical Sanity Check"@en ;
-               skos:definition "A Knowledge Engineering Process that evaluates whether a set of ontology axioms and assertions entails a contradiction."@en ;
+               skos:definition "A Computer Program Execution that evaluates whether a set of ontology axioms and assertions entails a contradiction."@en ;
                skos:example "Running a scan to confirm no instance belongs to two disjoint classes"@en ;
                skos:scopeNote "A reasoner task verifying that an active ontology configuration contains no contradictory logic statements."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -908,11 +947,12 @@ okea:ont000067 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000068
 okea:ont000068 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000028 ;
-               rdfs:label "Act of Ontology Classification"@en ;
-               skos:altLabel "Classification"@en ,
+               rdfs:subClassOf cceo:ComputerProgramExecution ;
+               rdfs:label "Ontology Classification Process"@en ;
+               skos:altLabel "Act of Ontology Classification"@en ,
+                             "Classification"@en ,
                              "Hierarchy Computation"@en ;
-               skos:definition "A Knowledge Engineering Process that computes a class hierarchy entailed by ontology axioms and assertions."@en ;
+               skos:definition "A Computer Program Execution that computes a class hierarchy entailed by ontology axioms and assertions."@en ;
                skos:example "Computing that `ex:SportsCar` is a nested subclass of `ex:Vehicle`"@en ;
                skos:scopeNote "The reasoner task of processing declared property parameters to build a fully articulated, verified taxonomy of classes."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -920,11 +960,12 @@ okea:ont000068 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000069
 okea:ont000069 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000028 ;
-               rdfs:label "Act of Ontology Realization"@en ;
-               skos:altLabel "Instance Typing Inference"@en ,
+               rdfs:subClassOf cceo:ComputerProgramExecution ;
+               rdfs:label "Ontology Realization Process"@en ;
+               skos:altLabel "Act of Ontology Realization"@en ,
+                             "Instance Typing Inference"@en ,
                              "Realization"@en ;
-               skos:definition "A Knowledge Engineering Process that computes the most specific ontology classes to which specified individuals belong."@en ;
+               skos:definition "A Computer Program Execution that computes the most specific ontology classes to which specified individuals belong."@en ;
                skos:example "Determining an individual belongs to `ex:Parent` because they have a child"@en ;
                skos:scopeNote "The reasoner task of determining the most specific direct logical classes that an individual belongs to."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -1007,12 +1048,12 @@ okea:ont000075 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000076
 okea:ont000076 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000028 ;
+               rdfs:subClassOf cco2:ont00001158 ;
                dcterms:bibliographicCitation "https://www.w3.org/TR/rdb-direct-mapping/"^^xsd:anyURI ;
                rdfs:label "Direct Relational to Resource Description Framework Mapping Process"@en ;
                skos:altLabel "Default Database Mapping"@en ,
                              "Direct Mapping"@en ;
-               skos:definition "A Knowledge Engineering Process that transforms a relational database into RDF according to a default mapping from relational schema structures to RDF graph structures."@en ;
+               skos:definition "An Act of Data Transformation that transforms a relational database into RDF according to a default mapping from relational schema structures to RDF graph structures."@en ;
                skos:example "Automatically turning table names into classes and columns into properties"@en ;
                skos:scopeNote "A standardized baseline method for translating a relational database structure into RDF automatically based strictly on table schemas."@en ;
                cco2:ont00001753 "RDF"@en ;
@@ -1021,12 +1062,13 @@ okea:ont000076 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000077
 okea:ont000077 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000028 ;
-               rdfs:label "Act of Knowledge Graph Virtualizing"@en ;
-               skos:altLabel "Ontology-Based Data Access"@en ,
+               rdfs:subClassOf cceo:ComputerProgramExecution ;
+               rdfs:label "Knowledge Graph Virtualization Process"@en ;
+               skos:altLabel "Act of Knowledge Graph Virtualizing"@en ,
+                             "Ontology-Based Data Access"@en ,
                              "VKG"@en ,
                              "Virtual Knowledge Graph"@en ;
-               skos:definition "A Knowledge Engineering Process that answers graph queries over source data by using mappings while leaving the source data in its original storage systems."@en ;
+               skos:definition "A Computer Program Execution that answers graph queries over source data by using mappings while leaving the source data in its original storage systems."@en ;
                skos:example "Virtualization through the Ontop framework configuration"@en ;
                skos:scopeNote "An act of data retrieval wherein graph data is returned in real-time through mappings, while the original data remains in original relational stores."@en ;
                cco2:ont00001753 "OBDA"@en ,
@@ -1086,10 +1128,10 @@ okea:ont000081 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000082
 okea:ont000082 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000028 ;
+               rdfs:subClassOf cceo:ModelingProcess ;
                rdfs:label "Act of Data Silo Alignment"@en ;
                skos:altLabel "System Integration Mapping"@en ;
-               skos:definition "A Knowledge Engineering Process that identifies and records correspondences between data structures from isolated systems and a shared semantic model."@en ;
+               skos:definition "A Modeling Process that identifies and records correspondences between data structures from isolated systems and a shared semantic model."@en ;
                skos:example "A crosswalk sheet connecting disparate application keys"@en ;
                skos:scopeNote "The process and resulting artifacts of mapping isolated, incompatible company systems to a unified ontology."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -1097,10 +1139,10 @@ okea:ont000082 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000083
 okea:ont000083 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000029 ;
+               rdfs:subClassOf cceo:OntologyEditingSoftwareApplication ;
                rdfs:label "Ontology Editor"@en ;
                skos:altLabel "Modeling Tool"@en ;
-               skos:definition "A Knowledge Engineering Software Artifact that is designed to support creating, editing, inspecting, validating, or publishing ontology artifacts."@en ;
+               skos:definition "An Ontology Editing Software Application that is designed to support creating, editing, inspecting, validating, or publishing ontology artifacts."@en ;
                skos:example "Protege, TopBraid Composer"@en ;
                skos:scopeNote "A desktop or web application used by knowledge engineers to design, build, and test ontologies."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -1175,10 +1217,10 @@ okea:ont000088 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000089
 okea:ont000089 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000029 ;
+               rdfs:subClassOf cceo:SoftwareStack ;
                rdfs:label "Semantic Middleware"@en ;
                skos:altLabel "Knowledge Graph Platform"@en ;
-               skos:definition "A Knowledge Engineering Software Artifact that is designed to provide application, pipeline, governance, search, tagging, or user-interface services over graph or ontology resources."@en ;
+               skos:definition "A Software Stack that is designed to provide application, pipeline, governance, search, tagging, or user-interface services over graph or ontology resources."@en ;
                skos:example "PoolParty, Metaphactory"@en ;
                skos:scopeNote "An enterprise software suite providing lifecycle management, tag management, pipelines, and user interfaces over a graph database."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -1186,11 +1228,11 @@ okea:ont000089 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000090
 okea:ont000090 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000029 ;
+               rdfs:subClassOf cceo:ApplicationSoftware ;
                rdfs:label "Graph Visualizer"@en ;
                skos:altLabel "Graph Viewer"@en ,
                              "Visualizer"@en ;
-               skos:definition "A Knowledge Engineering Software Artifact that is designed to generate visual representations of graph, ontology, or semantic data structures for human inspection."@en ;
+               skos:definition "An Application Software that is designed to generate visual representations of graph, ontology, or semantic data structures for human inspection."@en ;
                skos:example "WebVOWL display layout"@en ;
                skos:scopeNote "A tool or layout configuration that turns an ontology file into an interactive visual graph map for human inspection."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -1456,10 +1498,10 @@ okea:ont000111 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000112
 okea:ont000112 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000029 ;
+               rdfs:subClassOf cceo:NetworkServer ;
                rdfs:label "Terminology Server Component"@en ;
                skos:altLabel "Taxonomy API"@en ;
-               skos:definition "A Knowledge Engineering Software Artifact that is designed to provide network-accessible terminology lookup, code-system, taxonomy, or concept-resolution services."@en ;
+               skos:definition "A Network Server that is designed to provide network-accessible terminology lookup, code-system, taxonomy, or concept-resolution services."@en ;
                skos:example "A server cluster providing optimized SKOS lookups for electronic health records"@en ;
                skos:scopeNote "A server asset optimized to deliver high-speed terminology lookups, taxonomy structures, and SKOS hierarchies across systems."@en ;
                cco2:ont00001753 "API"@en ,
@@ -1469,11 +1511,11 @@ okea:ont000112 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000113
 okea:ont000113 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000028 ;
+               rdfs:subClassOf cceo:ModelingProcess ;
                rdfs:label "Act of Ontology Aligning"@en ;
                skos:altLabel "Ontology Alignment"@en ,
                              "Schema Matching"@en ;
-               skos:definition "A Knowledge Engineering Process that identifies semantic correspondences between entities represented in distinct ontologies, schemas, vocabularies, or knowledge graphs."@en ;
+               skos:definition "A Modeling Process that identifies semantic correspondences between entities represented in distinct ontologies, schemas, vocabularies, or knowledge graphs."@en ;
                skos:example "The process of matching `dbo:Automobile` to `schema:Car`"@en ;
                skos:scopeNote "The process or resulting artifact of finding semantic correspondences between distinct ontologies."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -1525,10 +1567,10 @@ okea:ont000117 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000118
 okea:ont000118 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000029 ;
+               rdfs:subClassOf cceo:DatabaseSoftwareApplication ;
                rdfs:label "Metadata Registry"@en ;
                skos:altLabel "Semantic Asset Registry"@en ;
-               skos:definition "A Knowledge Engineering Software Artifact that is designed to catalog, govern, search, or manage metadata about datasets, schemas, terminologies, mappings, or ontology bindings."@en ;
+               skos:definition "A Database Software Application that is designed to catalog, govern, search, or manage metadata about datasets, schemas, terminologies, mappings, or ontology bindings."@en ;
                skos:example "An enterprise repository indexing data assets and their ontology bindings"@en ;
                skos:scopeNote "A centralized catalog application tracking corporate data schemas, terminologies, and their structural links to the core ontology."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
@@ -1622,13 +1664,21 @@ okea:ont000125 rdf:type owl:Class ;
 
 ###  https://github.com/jonathanvajda/okea/ont000126
 okea:ont000126 rdf:type owl:Class ;
-               rdfs:subClassOf okea:ont000028 ;
-               rdfs:label "Act of Import Closure"@en ;
-               skos:altLabel "Import Closure Process"@en ;
-               skos:definition "A Knowledge Engineering Process that identifies, retrieves, and includes ontology modules designated by import declarations for use with a target ontology module."@en ;
+               rdfs:subClassOf cceo:ComputerProgramExecution ;
+               rdfs:label "Import Closure Process"@en ;
+               skos:altLabel "Act of Import Closure"@en ;
+               skos:definition "A Computer Program Execution that identifies, retrieves, and includes ontology modules designated by import declarations for use with a target ontology module."@en ;
                skos:example "`owl:imports <http://schema.org/>`"@en ;
                skos:scopeNote "A planned act that is prescribed by an ontology header directive, to dynamically fetch and include a separate external ontology."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
+
+
+###  https://www.commoncoreontologies.org/ont00000366
+cco2:ont00000366 rdf:type owl:Class .
+
+
+###  https://www.commoncoreontologies.org/ont00001158
+cco2:ont00001158 rdf:type owl:Class .
 
 
 ###  https://www.commoncoreontologies.org/ont00001180
