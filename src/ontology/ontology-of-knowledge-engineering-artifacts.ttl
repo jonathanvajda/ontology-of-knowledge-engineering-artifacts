@@ -1,4 +1,4 @@
-@prefix : <https://github.com/jonathanvajda/okea/> .
+@prefix : <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -11,12 +11,17 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
 @base <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
 
 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> rdf:type owl:Ontology ;
                                                                                  owl:versionIRI <https://github.com/jonathanvajda/okea/2026-06-19/OntologyOfKnowledgeEngineeringArtifacts> ;
-                                                                                 owl:imports <https://www.commoncoreontologies.org/ExtendedRelationOntology>, <https://www.commoncoreontologies.org/ArtifactOntology>, <https://www.commoncoreontologies.org/EventOntology>, <https://www.commoncoreontologies.org/InformationEntityOntology>, <http://purl.obolibrary.org/obo/iao.owl> ;
+                                                                                 owl:imports obo:obo-slim ,
+                                                                                             <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> ,
+                                                                                             cco2:AgentOntology ,
+                                                                                             cco2:ArtifactOntology ,
+                                                                                             cco2:EventOntology ,
+                                                                                             cco2:ExtendedRelationOntology ,
+                                                                                             cco2:InformationEntityOntology ;
                                                                                  dcterms:creator "Jonathan Vajda"@en ;
                                                                                  dcterms:description "The Ontology of Knowledge Engineering Artifacts is a reference ontology that extends the Information Entity Ontology (in CCO) to represent various information artifacts that surround the use of linked data and ontologies."@en ;
                                                                                  rdfs:label "Ontology of Knowledge Engineering Artifacts"@en ;
@@ -25,6 +30,14 @@
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/bibliographicCitation
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+dcterms:identifier rdf:type owl:AnnotationProperty .
+
 
 ###  https://github.com/jonathanvajda/okea/has_data_description_text_value
 okea:has_data_description_text_value rdf:type owl:AnnotationProperty ;
@@ -144,10 +157,10 @@ okea:has_competency_question_text_value rdf:type owl:DatatypeProperty ;
 
 ###  https://github.com/jonathanvajda/okea/has_git_repository_url
 okea:has_git_repository_url rdf:type owl:DatatypeProperty ;
-                             rdfs:range xsd:anyURI ;
-                             rdfs:label "has git repository url"@en ;
-                             skos:definition "x has git repository url y iff x is some entity and y is the uniform resource locator (URL) designating where code is under git versioning."@en ;
-                             cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
+                            rdfs:range xsd:anyURI ;
+                            rdfs:label "has git repository url"@en ;
+                            skos:definition "x has git repository url y iff x is some entity and y is the uniform resource locator (URL) designating where code is under git versioning."@en ;
+                            cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
 
 
 ###  https://github.com/jonathanvajda/okea/has_mermaid_diagram_text_value
@@ -211,6 +224,14 @@ okea:has_update_query_text_value rdf:type owl:DatatypeProperty ;
 #################################################################
 #    Classes
 #################################################################
+
+###  http://purl.obolibrary.org/obo/OBI_0001755
+obo:OBI_0001755 rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfRequestingInformation
+cceo:ActOfRequestingInformation rdf:type owl:Class .
+
 
 ###  https://github.com/jonathanvajda/okea/ont000001
 okea:ont000001 rdf:type owl:Class ;
@@ -579,8 +600,8 @@ okea:ont000045 rdf:type owl:Class ;
                rdfs:subClassOf cco2:ont00000958 ;
                dcterms:bibliographicCitation "https://www.w3.org/TR/shacl/"^^xsd:anyURI ;
                rdfs:label "Validation Severity Level"@en ;
-               skos:altLabel "Severity Level"@en ,
-                             "SHACL Severity"@en ;
+               skos:altLabel "SHACL Severity"@en ,
+                             "Severity Level"@en ;
                skos:definition "An Information Content Entity that categorizes the intended criticality of a validation result or validation constraint."@en ;
                skos:example "`sh:Violation`, `sh:Warning`, `sh:Info`"@en ;
                skos:scopeNote "A categorization marker inside a validation shape declaring the criticality of a specific rule failure."@en ;
@@ -593,8 +614,8 @@ okea:ont000046 rdf:type owl:Class ;
                rdfs:subClassOf okea:ont000031 ;
                dcterms:bibliographicCitation "https://shex.io/shex-semantics/"^^xsd:anyURI ;
                rdfs:label "Shape Expressions Schema"@en ;
-               skos:altLabel "Shape Expression Document"@en ,
-                             "ShEx Schema"@en ;
+               skos:altLabel "ShEx Schema"@en ,
+                             "Shape Expression Document"@en ;
                skos:definition "A Semantic Web File that bears a schema expressed in the Shape Expressions language for specifying expected RDF graph structures."@en ;
                skos:example "A `.shex` schema file"@en ;
                skos:scopeNote "A clear, compact layout document mapping expected graph structures using Shape Expressions syntax."@en ;
@@ -743,8 +764,8 @@ okea:ont000057 rdf:type owl:Class ;
                rdfs:subClassOf cco2:ont00000965 ;
                dcterms:bibliographicCitation "https://www.w3.org/TR/sparql11-query/"^^xsd:anyURI ;
                rdfs:label "SPARQL Protocol and Resource Description Framework Query Language Basic Graph Pattern"@en ;
-               skos:altLabel "Basic Graph Pattern"@en ,
-                             "BGP"@en ,
+               skos:altLabel "BGP"@en ,
+                             "Basic Graph Pattern"@en ,
                              "Pattern Group"@en ;
                skos:definition "A Directive Information Content Entity that is expressed in SPARQL syntax and prescribes a set of triple patterns that must be matched together against an RDF graph."@en ;
                skos:example "A set of three consecutive triple patterns wrapped in braces"@en ;
@@ -844,8 +865,8 @@ okea:ont000064 rdf:type owl:Class ;
                skos:definition "A Knowledge Engineering Specification that prescribes which semantic entailment rules are to be applied when interpreting, querying, or validating an RDF graph or ontology."@en ;
                skos:example "RDFS Entailment, OWL 2 DL Entailment"@en ;
                skos:scopeNote "A formal configuration specification defining exactly which logic rules a database must execute during data parsing or query evaluations."@en ;
-               cco2:ont00001753 "RDFS"@en ,
-                                "OWL"@en ;
+               cco2:ont00001753 "OWL"@en ,
+                                "RDFS"@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
 
 
@@ -973,8 +994,8 @@ okea:ont000075 rdf:type owl:Class ;
                rdfs:subClassOf okea:ont000030 ;
                dcterms:bibliographicCitation "https://rml.io/specs/rml/"^^xsd:anyURI ;
                rdfs:label "Resource Description Framework Mapping Language Mapping"@en ;
-               skos:altLabel "RML"@en ,
-                             "RDF Mapping Language"@en ;
+               skos:altLabel "RDF Mapping Language"@en ,
+                             "RML"@en ;
                skos:definition "A Knowledge Engineering Specification that is expressed in the RDF Mapping Language and prescribes how data from heterogeneous sources are to be transformed into RDF triples."@en ;
                skos:example "An `.rml` script mapping JSON/XML feeds"@en ;
                skos:scopeNote "An extended mapping language built as a superset of R2RML, designed to pull raw data from JSON, XML, CSV, and Web APIs into RDF graphs."@en ;
@@ -1381,8 +1402,8 @@ okea:ont000107 rdf:type owl:Class ;
                skos:example "An `.obda` configuration file mapping database keys to graph predicates"@en ;
                skos:scopeNote "A configuration for parsing SQL queries out of incoming live SPARQL queries via real-time schema alignment."@en ;
                cco2:ont00001753 "OBDA"@en ,
-                                "SQL"@en ,
-                                "SPARQL"@en ;
+                                "SPARQL"@en ,
+                                "SQL"@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
 
 
@@ -1608,6 +1629,10 @@ okea:ont000126 rdf:type owl:Class ;
                skos:example "`owl:imports <http://schema.org/>`"@en ;
                skos:scopeNote "A planned act that is prescribed by an ontology header directive, to dynamically fetch and include a separate external ontology."@en ;
                cco2:ont00001760 <https://github.com/jonathanvajda/okea/OntologyOfKnowledgeEngineeringArtifacts> .
+
+
+###  https://www.commoncoreontologies.org/ont00001180
+cco2:ont00001180 rdf:type owl:Class .
 
 
 #################################################################

@@ -13,6 +13,10 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
 
+<http://purl.obolibrary.org/obo/obo-slim> a owl:Ontology ;
+                                          owl:versionIRI <http://purl.obolibrary.org/obo/obo-slim_2026-06-19> ;
+                                          rdfs:comment "This is a bundle of different IRIs in the OBO Foundry, such as from the Information Artifact Ontology (IAO), Ontology of Biomedical Investigations (OBI), etc."@en .
+
 ###  http://purl.obolibrary.org/obo/IAO_0000114
 obo:IAO_0000114 rdf:type owl:AnnotationProperty .
 
@@ -33,7 +37,7 @@ obo:IAO_0000642 rdf:type owl:Class ;
                 skos:definition "A textual entity that expresses the requirements necessary to use a resource, e.g. software."@en ;
                 cco2:ont00001760 obo:iao.owl .
 
-                
+
 ###  http://purl.obolibrary.org/obo/IAO_8000000
 obo:IAO_8000000 rdf:type owl:Class ;
                 rdfs:subClassOf cco2:ont00000958 ;

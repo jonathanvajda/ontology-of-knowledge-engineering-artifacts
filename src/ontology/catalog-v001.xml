@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="https://www.commoncoreontologies.org/ArtifactOntology" uri="imports/cco-modules/ArtifactOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://www.commoncoreontologies.org/EventOntology" uri="imports/cco-modules/EventOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://www.commoncoreontologies.org/TimeOntology" uri="imports/cco-modules/TimeOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl" uri="imports/bfo-core.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://www.commoncoreontologies.org/ExtendedRelationOntology" uri="imports/cco-modules/ExtendedRelationOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://www.commoncoreontologies.org/GeospatialOntology" uri="imports/cco-modules/GeospatialOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://www.commoncoreontologies.org/InformationEntityOntology" uri="imports/cco-modules/InformationEntityOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://www.commoncoreontologies.org/AgentOntology" uri="imports/cco-modules/AgentOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/iao.owl" uri="imports/obo.ttl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology" uri="imports/cco-extensions/CognitiveProcessOntology.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/obo-slim" uri="imports/obo.ttl"/>
+</catalog>

@@ -13,7 +13,7 @@
 
 <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CyberOntology> rdf:type owl:Ontology ;
                                                                                owl:versionIRI <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/2025-03-04/CyberOntology> ;
-                                                                               owl:imports cco2:AllCoreOntology ;
+###                                                                               owl:imports cco2:AllCoreOntology ;
                                                                                dcterms:license """Copyright 2025 CUBRC Inc.
 
 https://opensource.org/license/bsd-3-clause
