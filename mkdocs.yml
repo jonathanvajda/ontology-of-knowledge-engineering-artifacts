@@ -2,6 +2,7 @@ site_name: Ontology of Knowledge Engineering Artifacts
 site_description: Documentation for the Ontology of Knowledge Engineering Artifacts.
 repo_url: https://github.com/jonathanvajda/ontology-of-knowledge-engineering-artifacts
 docs_dir: docs
+site_dir: site
 nav:
   - Home: index.md
   - Theory and Patterns: theory-and-patterns.md
