@@ -1,0 +1,927 @@
+@prefix : <http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances#> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances> .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances> rdf:type owl:Ontology ;
+                                                                               owl:versionIRI <http://www.ontologyrepository.com/CommonCoreOntologies/Instances/2020-05-28/CyberInstances> ;
+                                                                               owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CyberOntology> ;
+                                                                               rdfs:comment "This file is intended as a simple knowledge base of instances relevant to the cyber domain."@en ;
+                                                                               rdfs:label "Cyber Instances"@en ;
+                                                                               owl:versionInfo "COPYRIGHT © 2015-2020 CUBRC Inc."@en .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ASPDotNET
+cco:ASPDotNET rdf:type owl:NamedIndividual ,
+                       cco:SoftwareFramework ;
+              cco:elucidation "A Software Framework that is an open-source, server-side web application framework designed for web development to produce dynamic web pages developed by Microsoft to allow programmers to build dynamic web sites, applications and services."@en ;
+              dc:source "https://en.wikipedia.org/wiki/ASP.NET"^^xsd:anyURI ;
+              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+              rdfs:label "ASP.NET Programming Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ApplicationLayer
+cco:ApplicationLayer rdf:type owl:NamedIndividual ,
+                              cco:OpenSystemsInterconnectionCategory ;
+                     cco:alternative_label "OSI Layer 7"@en ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                     rdfs:label "Application Layer"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CPlusPlusProgrammingLanguage
+cco:CPlusPlusProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                          cco:CompiledLanguage ;
+                                 cco:elucidation "A Compiled Language, general-purpose, created by Bjarne Stroustrup as an extension of the C programming language. C with Classes."@en ;
+                                 dc:source "https://en.wikipedia.org/wiki/C%2B%2B"^^xsd:anyURI ;
+                                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                                 rdfs:label "C++ Programming Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CProgrammingLanguage
+cco:CProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                  cco:CompiledLanguage ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                         rdfs:label "C Programming Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CSharpProgrammingLanguage
+cco:CSharpProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                       cco:CompiledLanguage ;
+                              cco:elucidation "A Compiled Language that is a general-purpose, multi-paradigm language encompassing strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines."@en ;
+                              dc:source "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"^^xsd:anyURI ;
+                              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                              rdfs:label "C# Programming Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DataLinkLayer
+cco:DataLinkLayer rdf:type owl:NamedIndividual ,
+                           cco:OpenSystemsInterconnectionCategory ;
+                  cco:alternative_label "OSI Layer 2"@en ;
+                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                  rdfs:label "Data Link Layer"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DomainNameSystem
+cco:DomainNameSystem rdf:type owl:NamedIndividual ,
+                              cco:DesignationSpecification ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                     rdfs:label "Domain Name System"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DynamicHostConfigurationProtocol
+cco:DynamicHostConfigurationProtocol rdf:type owl:NamedIndividual ,
+                                              cco:InformationTransferProtocol ;
+                                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                                     rdfs:label "Dynamic Host Configuration Protocol"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ExtensibleMarkupLanguage
+cco:ExtensibleMarkupLanguage rdf:type owl:NamedIndividual ,
+                                      cco:MarkupLanguage ;
+                             cco:elucidation "A Markup Language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. The World Wide Web Consortium's XML 1.0 Specification of 1998 and several other related specifications-all of them free open standards—define XML."@en ;
+                             dc:source "https://en.wikipedia.org/wiki/XML"^^xsd:anyURI ;
+                             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                             rdfs:label "Extensible Markup Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Facebook
+cco:Facebook rdf:type owl:NamedIndividual ,
+                      cco:SocialNetworkingSite ;
+             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+             rdfs:label "Facebook"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/FileTransferProtocol
+cco:FileTransferProtocol rdf:type owl:NamedIndividual ,
+                                  cco:InformationTransferProtocol ;
+                         cco:alternative_label "FTP"@en ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                         rdfs:label "File Transfer Protocol"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/GoProgrammingLanguage
+cco:GoProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                   cco:CompiledLanguage ;
+                          cco:elucidation "A Compiled Language that is statically typed and designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson."@en ;
+                          dc:source "https://en.wikipedia.org/wiki/Go_(programming_language)"^^xsd:anyURI ;
+                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                          rdfs:label "Go Programming Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/GooglePlus
+cco:GooglePlus rdf:type owl:NamedIndividual ,
+                        cco:SocialNetworkingSite ;
+               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+               rdfs:label "Google+"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/HypertextMarkupLanguage
+cco:HypertextMarkupLanguage rdf:type owl:NamedIndividual ,
+                                     cco:MarkupLanguage ;
+                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                            rdfs:label "Hypertext Markup Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/HypertextTransferProtocol
+cco:HypertextTransferProtocol rdf:type owl:NamedIndividual ,
+                                       cco:InformationTransferProtocol ;
+                              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                              rdfs:label "Hypertext Transfer Protocol"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Internet
+cco:Internet rdf:type owl:NamedIndividual ,
+                      cco:WideAreaNetwork ;
+             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+             rdfs:label "Internet"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InternetProtocol
+cco:InternetProtocol rdf:type owl:NamedIndividual ,
+                              cco:InformationTransferProtocol ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                     rdfs:label "Internet Protocol"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InternetRelayChatProtocol
+cco:InternetRelayChatProtocol rdf:type owl:NamedIndividual ,
+                                       cco:InformationTransferProtocol ;
+                              cco:alternative_label "IRC Protocol"@en ;
+                              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                              rdfs:label "Internet Relay Chat Protocol"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/JavaProgrammingLanguage
+cco:JavaProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                     cco:CompiledLanguage ;
+                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                            rdfs:label "Java Programming Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/JavaScriptObjectNotation
+cco:JavaScriptObjectNotation rdf:type owl:NamedIndividual ,
+                                      cco:DataExchangeLanguage ;
+                             cco:alternative_label "JSON"@en ;
+                             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                             rdfs:label "JavaScript Object Notation"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/JavaScriptProgrammingLanguage
+cco:JavaScriptProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                           cco:InterpretedLanguage ;
+                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                                  rdfs:label "JavaScript Programmning Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/KotlinProgrammingLangugae
+cco:KotlinProgrammingLangugae rdf:type owl:NamedIndividual ,
+                                       cco:CompiledLanguage ;
+                              cco:elucidation "A Compiled Language that is a cross-platform, statically typed, general-purpose language with type inference. Language development costs are borne by JetBrains, while the Kotlin Foundation protects the Kotlin trademark."@en ;
+                              dc:source "https://en.wikipedia.org/wiki/Kotlin_(programming_language)"^^xsd:anyURI ;
+                              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                              rdfs:label "Kotlin Programming Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/LinkedIn
+cco:LinkedIn rdf:type owl:NamedIndividual ,
+                      cco:SocialNetworkingSite ;
+             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+             rdfs:label "LinkedIn"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MacOS10-15
+cco:MacOS10-15 rdf:type owl:NamedIndividual ,
+                        cco:MacOperatingSystemSoftwareModel ;
+               cco:alternative_label "Catalina"@en ;
+               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+               rdfs:label "MacOS 10.15"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MacOS10-15-1
+cco:MacOS10-15-1 rdf:type owl:NamedIndividual ,
+                          cco:MacOperatingSystemSoftwareModel ;
+                 cco:alternative_label "Catalina"@en ;
+                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                 rdfs:label "MacOS 10.15.1"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MicrosoftSQLServerSoftwareModel
+cco:MicrosoftSQLServerSoftwareModel rdf:type owl:NamedIndividual ,
+                                             cco:RelationalDatabaseSoftwareApplicationModel ;
+                                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                                    rdfs:comment "A Relational Database and relational database management system developed by Microsoft."@en ;
+                                    rdfs:label "Microsoft SQL Server Database Software Model"@en ;
+                                    rdfs:seeAlso "https://en.wikipedia.org/wiki/Microsoft_SQL_Server"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MongoDBDatabaseSoftwareModel
+cco:MongoDBDatabaseSoftwareModel rdf:type owl:NamedIndividual ,
+                                          cco:DocumentStoreDatabaseSoftwareApplicationModel ;
+                                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                                 rdfs:comment "A Non-Relational Database consisting of a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema."@en ;
+                                 rdfs:label "MongoDB Database Software Model"@en ;
+                                 rdfs:seeAlso "https://en.wikipedia.org/wiki/MongoDB"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MysqlDatabaseSoftwareModel
+cco:MysqlDatabaseSoftwareModel rdf:type owl:NamedIndividual ,
+                                        cco:RelationalDatabaseSoftwareApplicationModel ;
+                               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                               rdfs:comment "An open-source relational database management system (RDBMS)."@en ;
+                               rdfs:label "MySQL Database Software Model"@en ;
+                               rdfs:seeAlso "https://en.wikipedia.org/wiki/MySQL"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/NetworkLayer
+cco:NetworkLayer rdf:type owl:NamedIndividual ,
+                          cco:OpenSystemsInterconnectionCategory ;
+                 cco:alternative_label "OSI Layer 3"@en ;
+                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                 rdfs:label "Network Layer"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/OracleDatabaseSoftwareModel
+cco:OracleDatabaseSoftwareModel rdf:type owl:NamedIndividual ,
+                                         cco:MultiModelDatabaseSoftwareApplicationModel ;
+                                cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                                rdfs:comment "Includes a proprietary multi-model database management system produced and marketed by Oracle Corporation."@en ;
+                                rdfs:label "Oracle Database Software Model"@en ;
+                                rdfs:seeAlso "https://en.wikipedia.org/wiki/Oracle_Database"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PHPProgrammingLanguage
+cco:PHPProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                    cco:InterpretedLanguage ;
+                           cco:elucidation "An Interpreted Language, general-purpose, originally designed for web development. It was originally created by Rasmus Lerdorf in 1994, the PHP reference implementation is now produced by The PHP Group."@en ;
+                           dc:source "https://en.wikipedia.org/wiki/PHP"^^xsd:anyURI ;
+                           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                           rdfs:label "PHP Programming Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PerlProgrammingLanguage
+cco:PerlProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                     cco:InterpretedLanguage ;
+                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                            rdfs:comment "Perl refers to Perl 5 and earlier, not Perl 6, which was renamed to Raku."@en ;
+                            rdfs:label "Perl Programming Language"@en ;
+                            rdfs:seeAlso "https://en.wikipedia.org/wiki/Perl"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PhysicalLayer
+cco:PhysicalLayer rdf:type owl:NamedIndividual ,
+                           cco:OpenSystemsInterconnectionCategory ;
+                  cco:alternative_label "OSI Layer 1"@en ;
+                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                  rdfs:label "Physical Layer"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PostgreSQLDatabaseSoftwareModel
+cco:PostgreSQLDatabaseSoftwareModel rdf:type owl:NamedIndividual ,
+                                             cco:RelationalDatabaseSoftwareApplicationModel ;
+                                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                                    rdfs:comment "A Relational Database and database management system (RDBMS) that is open-source and emphasizes extensibility and technical standards compliance."@en ;
+                                    rdfs:label "PostgreSQL Database Software Software Model"@en ;
+                                    rdfs:seeAlso "https://en.wikipedia.org/wiki/PostgreSQL"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PresentationLayer
+cco:PresentationLayer rdf:type owl:NamedIndividual ,
+                               cco:OpenSystemsInterconnectionCategory ;
+                      cco:alternative_label "OSI Layer 6"@en ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                      rdfs:label "Presentation Layer"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PythonProgrammingLanguage
+cco:PythonProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                       cco:InterpretedLanguage ;
+                              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                              rdfs:label "Python Programming Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RProgrammingLanguage
+cco:RProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                  cco:InterpretedLanguage ;
+                         cco:elucidation "An Interpreted Language and free software environment for statistical computing and graphics supported by the R Foundation for Statistical Computing."@en ;
+                         dc:source "https://en.wikipedia.org/wiki/R_(programming_language)"^^xsd:anyURI ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                         rdfs:label "R Programming Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RakuProgrammingLanguage
+cco:RakuProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                     cco:InterpretedLanguage ;
+                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                            rdfs:comment "Raku used to be called Perl 6."@en ;
+                            rdfs:label "Raku Programming Language"@en ;
+                            rdfs:seeAlso "https://en.wikipedia.org/wiki/Raku_(programming_language)"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ResourceDescriptionFramework
+cco:ResourceDescriptionFramework rdf:type owl:NamedIndividual ,
+                                          cco:DataExchangeLanguage ;
+                                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                                 rdfs:label "Resource Description Framework"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RubyProgrammingLanguage
+cco:RubyProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                     cco:CompiledLanguage ;
+                            cco:elucidation "A Compiled Language that is high-level and general-purpose. It was designed and developed in the mid-1990s by Yukihiro Matsumoto in Japan."@en ;
+                            dc:source "https://en.wikipedia.org/wiki/Ruby_(programming_language)"^^xsd:anyURI ;
+                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                            rdfs:label "Ruby Programming Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RustProgrammingLanguage
+cco:RustProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                     cco:CompiledLanguage ;
+                            cco:elucidation "A Compiled Language that is a multi-paradigm system language focused on safety, especially safe concurrency."@en ;
+                            dc:source "https://en.wikipedia.org/wiki/Rust_(programming_language)"^^xsd:anyURI ;
+                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                            rdfs:label "Rust Programming Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SQLiteDatabaseSoftwareModel
+cco:SQLiteDatabaseSoftwareModel rdf:type owl:NamedIndividual ,
+                                         cco:RelationalDatabaseSoftwareApplicationModel ;
+                                cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                                rdfs:comment "A Relational Database management system (RDBMS) contained in a C library."@en ;
+                                rdfs:label "SQLite Database Software Model"@en ;
+                                rdfs:seeAlso "https://en.wikipedia.org/wiki/SQLite"^^xsd:anyURI .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/STIXCampaignCategory
+cco:STIXCampaignCategory rdf:type owl:NamedIndividual ,
+                                  cco:STIXComponentCategory ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                         rdfs:label "STIX Campaign Category"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/STIXCourseOfActionCategory
+cco:STIXCourseOfActionCategory rdf:type owl:NamedIndividual ,
+                                        cco:STIXComponentCategory ;
+                               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                               rdfs:label "STIX Course of Action Category"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/STIXExploitTargetCategory
+cco:STIXExploitTargetCategory rdf:type owl:NamedIndividual ,
+                                       cco:STIXComponentCategory ;
+                              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                              rdfs:label "STIX Exploit Target Category"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/STIXIncidentCategory
+cco:STIXIncidentCategory rdf:type owl:NamedIndividual ,
+                                  cco:STIXComponentCategory ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                         rdfs:label "STIX Incident Category"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/STIXIndicatorCategory
+cco:STIXIndicatorCategory rdf:type owl:NamedIndividual ,
+                                   cco:STIXComponentCategory ;
+                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                          rdfs:label "STIX Indicator Category"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/STIXObservableCategory
+cco:STIXObservableCategory rdf:type owl:NamedIndividual ,
+                                    cco:STIXComponentCategory ;
+                           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                           rdfs:label "STIX Observable Category"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/STIXReportCategory
+cco:STIXReportCategory rdf:type owl:NamedIndividual ,
+                                cco:STIXComponentCategory ;
+                       cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                       rdfs:label "STIX Report Category"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/STIXTacticsTechniquesProceduresCategory
+cco:STIXTacticsTechniquesProceduresCategory rdf:type owl:NamedIndividual ,
+                                                     cco:STIXComponentCategory ;
+                                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                                            rdfs:label "STIX Tactics Techniques Procedures Category"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/STIXThreatActorCategory
+cco:STIXThreatActorCategory rdf:type owl:NamedIndividual ,
+                                     cco:STIXComponentCategory ;
+                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                            rdfs:label "STIX Threat Actor Category"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ScalaProgrammingLanguage
+cco:ScalaProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                      cco:CompiledLanguage ;
+                             cco:elucidation "A Compiled Language that is a general-purpose language providing support for functional programming and a strong static type system."@en ;
+                             dc:source "https://en.wikipedia.org/wiki/Scala_(programming_language)"^^xsd:anyURI ;
+                             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                             rdfs:label "Scala Programming Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SessionLayer
+cco:SessionLayer rdf:type owl:NamedIndividual ,
+                          cco:OpenSystemsInterconnectionCategory ;
+                 cco:alternative_label "OSI Layer 5"@en ;
+                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                 rdfs:label "Session Layer"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/StructuredQueryLanguage
+cco:StructuredQueryLanguage rdf:type owl:NamedIndividual ,
+                                     cco:QueryLanguage ;
+                            cco:elucidation "A Query Language used in programming and designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS)."@en ;
+                            dc:source "https://en.wikipedia.org/wiki/SQL"^^xsd:anyURI ;
+                            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                            rdfs:label "Structured Query Language"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SwiftProgrammingLanguage
+cco:SwiftProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                      cco:CompiledLanguage ;
+                             cco:elucidation "A Compiled Language that is a general-purpose, multi-paradigm, compiled language developed by Apple Inc. for iOS, iPadOS, macOS, watchOS, tvOS, Linux, and z/OS."@en ;
+                             dc:source "https://en.wikipedia.org/wiki/Swift_(programming_language)"^^xsd:anyURI ;
+                             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                             rdfs:label "Swift Programmng Langauge"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/TheOnionRouter
+cco:TheOnionRouter rdf:type owl:NamedIndividual ,
+                            cco:Anonymizer ;
+                   cco:alternative_label "TOR"@en ;
+                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                   rdfs:label "The Onion Router"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/TransmissionControlProtocol
+cco:TransmissionControlProtocol rdf:type owl:NamedIndividual ,
+                                         cco:InformationTransferProtocol ;
+                                cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                                rdfs:label "Transmission Control Protocol"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/TransportLayer
+cco:TransportLayer rdf:type owl:NamedIndividual ,
+                            cco:OpenSystemsInterconnectionCategory ;
+                   cco:alternative_label "OSI Layer 4"@en ;
+                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                   rdfs:label "Transport Layer"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Twitter
+cco:Twitter rdf:type owl:NamedIndividual ,
+                     cco:Microblog ,
+                     cco:SocialNetworkingSite ;
+            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+            rdfs:label "Twitter"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/TypeScriptProgrammingLanguage
+cco:TypeScriptProgrammingLanguage rdf:type owl:NamedIndividual ,
+                                           cco:InterpretedLanguage ;
+                                  cco:elucidation "An Interpreted Language that is an open-source language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript, and adds optional static typing to the language."@en ;
+                                  dc:source "https://en.wikipedia.org/wiki/TypeScript"^^xsd:anyURI ;
+                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+                                  rdfs:label "TypeScript Programming Language"@en .
+
+
+cco:ApacheHTTPServer a owl:NamedIndividual, cco:WebServer ;
+    cco:elucidation "A free and open-source cross-platform web server software, released under the terms of Apache License 2.0. Apache is developed and maintained by an open community of developers under the auspices of the Apache Software Foundation."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Apache_HTTP_Server"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Apache HTTP Server"@en .
+
+cco:OpenBSD a owl:NamedIndividual, cco:UnixOperatingSystemModel ;
+    cco:elucidation "A free and open-source Unix-like operating system based on the Berkeley Software Distribution"@en;
+    dc:source "https://en.wikipedia.org/wiki/OpenBSD"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "OpenBSD"@en .
+
+cco:Httpd a owl:NamedIndividual, cco:ApplicationSoftware ;
+    cco:elucidation "The Apache HyperText Transfer Protocol (HTTP) server program."@en ;
+    dc:source "http://httpd.apache.org/docs/trunk/programs/httpd.html"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Httpd"@en .
+
+cco:Elasticsearch a owl:NamedIndividual, cco:ContentAccessSoftware ;
+    cco:elucidation "A Content Access Software based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Elasticsearch"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Elasticsearch"@en .
+
+cco:Logstash a owl:NamedIndividual, cco:ApplicationSoftware ;
+    cco:elucidation "A Application for managing events and logs."@en ;
+    dc:source "https://wikitech.wikimedia.org/wiki/Logstash"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Logstash"@en .
+
+cco:Kibana a owl:NamedIndividual, cco:ApplicationSoftware ;
+    cco:elucidation "An open source Application for data visualization on an Elasticsearch cluster."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Kibana"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Kibana"@en .
+
+cco:Xen a owl:NamedIndividual, cco:HypervisorProgram ;
+    cco:elucidation "A type-1 hypervisor, providing services that allow multiple computer operating systems to execute on the same computer hardware concurrently."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Xen"^^xsd:anyURI;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Xen"@en .
+
+cco:KernelBasedVirtualMachine a owl:NamedIndividual, cco:HypervisorProgram ;
+    cco:elucidation "A virtualization module in the Linux kernel that allows the kernel to function as a hypervisor."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Kernel Based Virtual Machine"@en .
+
+cco:LXC a owl:NamedIndividual, cco:HypervisorProgram ;
+    cco:elucidation "An operating-system-level virtualization method for running multiple isolated Linux systems (containers) on a control host using a single Linux kernel."@en ;
+    dc:source "https://en.wikipedia.org/wiki/LXC"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "LXC"@en .
+
+cco:LogicalVolumeManager a owl:NamedIndividual, cco:ComputerProgram ;
+    cco:elucidation "A device mapper target that provides logical volume management for the Linux kernel."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Logical Volume Manager"@en .
+
+cco:DistributedReplicatedBlockDevice a owl:NamedIndividual, cco:ComputerProgram ;
+    cco:elucidation "A distributed replicated storage system for the Linux platform."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Distributed_Replicated_Block_Device"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Distributed Replicated Block Device"@en .
+
+cco:Ganeti a owl:NamedIndividual, cco:SoftwareStack ;
+    cco:elucidation "A virtual machine cluster management tool developed by Google. The solution stack uses either Xen, KVM, or LXC as the virtualization platform, LVM for disk management, and optionally DRBD for disk replication across physical hosts or shared storage for external replication."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Ganeti"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Ganeti"@en . 
+
+cco:GanetiWebManager a owl:NamedIndividual, cco:ApplicationSoftware;
+    cco:elucidation "A web-based management interface for the Ganeti solution stack for virtual machine clusters"@en ;
+    dc:source "https://en.wikipedia.org/wiki/Ganeti_Web_Manager"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Ganeti Web Manager"@en .
+
+cco:GemstoneDatabase a owl:NamedIndividual , cco:MultiModelDatabaseSoftwareApplicationModel;
+    cco:elucidation "An application framework that was first available for the programming language Smalltalk as an object database."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Gemstone_(database)"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Gemstone Database"@en .
+
+cco:SmalltalkProgrammingLanguage a owl:NamedIndividual, cco:InterpretedLanguage ;
+    cco:elucidation "An object-oriented, dynamically typed reflective programming language."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Smalltalk"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"@en ;
+    rdfs:label "Smalltalk Programming Language"@en .
+
+cco:SeasideWebFramework a owl:NamedIndividual, cco:SoftwareFramework ;
+    cco:elucidation "A web framework to develop web applications in the programming language Smalltalk."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Seaside_(software)"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Seaside Web Framework"@en .
+
+cco:GraphQL a owl:NamedIndividual, cco:QueryLanguage ;
+    cco:elucidation "An open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data."@en ;
+    dc:source "https://en.wikipedia.org/wiki/GraphQL"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "GraphQL"@en .
+
+cco:ReactJS a owl:NamedIndividual, cco:InterpretedLanguage ;
+    cco:elucidation "A JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies."@en ;
+    dc:source "https://en.wikipedia.org/wiki/React_(web_framework)"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "ReactJS"@en .
+
+cco:ApolloDataGraphPlatform a owl:NamedIndividual, cco:WebServer ;
+    cco:elucidation "A Web Server that is the industry-standard GraphQL implementation, providing the data graph layer that connects modern apps to the cloud."@en ;
+    dc:source "https://www.apollographql.com"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Apollo Data Graph Platform"@en .
+
+cco:Neo4j a owl:NamedIndividual, cco:GraphDatabaseSoftwareApplicationModel ;
+    cco:elucidation "A graph database management system developed by Neo4j, Inc."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Neo4j"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Neo4j"@en .
+
+cco:EucalyptusComputerProgram a owl:NamedIndividual, cco:ComputerProgram ;
+    cco:elucidation "A paid and open-source computer software for building Amazon Web Services (AWS)-compatible private and hybrid cloud computing environments, originally developed by the company Eucalyptus Systems."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Eucalyptus_(software)"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Eucalyptus Computer Program"@en .   
+
+cco:AppScale a owl:NamedIndividual, cco:ComputerProgram ;
+    cco:elucidation "An open-source serverless computing platform that automatically deploys and scales unmodified Google App Engine applications over public and private clouds, as well as on-premises clusters."@en ;
+    dc:source "https://en.wikipedia.org/wiki/AppScale"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "AppScale"@en .
+
+cco:Nginx a owl:NamedIndividual, cco:WebServer ;
+    cco:elucidation "A web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Nginx"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Nginx"@en .
+
+cco:MariaDB a owl:NamedIndividual, cco:RelationalDatabaseSoftwareApplicationModel ;
+    cco:elucidation "A community-developed, commercially supported fork of the MySQL relational database management system (RDBMS), intended to remain free and open-source software under the GNU General Public License."@en ;
+    dc:source "https://en.wikipedia.org/wiki/MariaDB"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "MariaDB"@en .
+
+cco:Lighttpd a owl:NamedIndividual, cco:WebServer ;
+    cco:elucidation "An open-source web server optimized for speed-critical environments while remaining standards-compliant, secure and flexible."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Lighttpd"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Lighttpd"@en .
+
+cco:YawsWebServer a owl:NamedIndividual, cco:WebServer ;
+    cco:elucidation "A web server written in Erlang by Claes (klacke) Wikström."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Yaws_(web_server)"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Yaws Web Server"@en .
+
+cco:MnesiaRelationalDatabase a owl:NamedIndividual, cco:RelationalDatabaseSoftwareApplicationModel ;
+    cco:elucidation "A distributed, soft real-time database management system written in the Erlang programming language."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Mnesia"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Mnesia Relational Database"@en .
+
+cco:ErlangProgrammingLanguage a owl:NamedIndividual, cco:InterpretedLanguage ;
+    cco:elucidation "A general-purpose, concurrent, functional programming language, and a garbage-collected runtime system."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Erlang_(programming_language)"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Erlang Programming Language"@en .
+
+cco:ApacheMesos a owl:NamedIndividual, cco:ComputerProgram ;
+    cco:elucidation "An open-source project to manage computer clusters. It was developed at the University of California, Berkeley."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Apache_Mesos"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Apache Mesos"@en .
+
+cco:AkkaToolkit a owl:NamedIndividual, cco:ComputerProgram ;
+    cco:elucidation "A free and open-source toolkit and runtime simplifying the construction of concurrent and distributed applications on the JVM."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Akka_(toolkit)"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Akka Toolkit"@en .
+
+cco:RiakDatabase a owl:NamedIndividual, cco:KeyValueDatabaseSoftwareApplicationModel ;
+    cco:elucidation "A distributed NoSQL key-value data store that offers high availability, fault tolerance, operational simplicity, and scalability."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Riak"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Riak Database"@en .
+
+cco:ApacheKafka a owl:NamedIndividual, cco:ComputerProgram ;
+    cco:elucidation "An open-source stream-processing software platform developed by LinkedIn and donated to the Apache Software Foundation, written in Scala and Java."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Apache_Kafka"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Apache Kafka"@en .
+
+cco:ApacheSpark a owl:NamedIndividual, cco:SoftwareFramework;
+    cco:elucidation "An open-source distributed general-purpose cluster-computing framework."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Apache_Spark"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Apache Spark"@en .
+
+cco:VueJS a owl:NamedIndividual, cco:InterpretedLanguage ;
+    cco:elucidation "An open-source Model–view–viewmodel JavaScript framework for building user interfaces and single-page applications."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Vue.js"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "VueJS"@en .
+
+cco:AOLserver a owl:NamedIndividual, cco:WebServer ;
+    cco:elucidation "AOL's open source web server which is multithreaded, Tcl-enabled, and used for large scale, dynamic web sites."@en ;
+    dc:source "https://en.wikipedia.org/wiki/AOLserver"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "AOLserver"@en .
+
+cco:ArsDigitaCommunitySystem a owl:NamedIndividual, cco:SoftwareFramework ;
+    cco:elucidation "An open source toolkit for developing community web applications developed primarily by developers associated with ArsDigita Corporation."@en ;
+    dc:source "https://en.wikipedia.org/wiki/ArsDigita_Community_System"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "ArsDigita Community System"@en .
+
+cco:TclProgrammingLanguage a owl:NamedIndividual, cco:InterpretedLanguage ;
+    cco:elucidation "A high-level, general-purpose, interpreted, dynamic programming language."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Tcl"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Tcl Programming Language"@en .
+
+cco:PrometheusApplicationSoftware a owl:NamedIndividual, cco:ApplicationSoftware ;
+    cco:elucidation "A free software application used for event monitoring and alerting."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Prometheus_(software)"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Prometheus Application Software"@en .
+
+cco:LinkerdApplicationSoftware a owl:NamedIndividual, cco:ApplicationSoftware ;
+    cco:elucidation "A service mesh for Kubernetes and other frameworks."@en ;
+    dc:source "https://linkerd.io/2/overview/"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Linkerd Application Software"@en .
+    
+cco:OpenFaaS a owl:NamedIndividual, cco:ComputerProgram ;
+    cco:elucidation "An open source Computer Program that allows the deploytment of fucntions and code to Kubernetes"@en ;
+    dc:source "https://docs.openfaas.com"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "OpenFaaS"@en .
+
+cco:NATSMessaging a owl:NamedIndividual, cco:ComputerProgram ;
+    cco:elucidation "An open-source messaging system (sometimes called message-oriented middleware)."@en ;
+    dc:source "https://en.wikipedia.org/wiki/NATS_Messaging"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "NATS Messaging"@en .
+
+cco:Kubernetes a owl:NamedIndividual, cco:ComputerProgram ;
+    cco:elucidation "An open-source container-orchestration system for automating application deployment, scaling, and management."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Kubernetes"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Kubernetes"@en .
+
+cco:ApacheCassandra a owl:NamedIndividual, cco:KeyValueDatabaseSoftwareApplicationModel ;
+    cco:elucidation "a free and open-source, distributed, wide column store, NoSQL database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure."@en;
+    dc:source "https://en.wikipedia.org/wiki/Apache_Cassandra"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Apache Cassandra"@en .
+
+cco:InternetInformationServicesWebServer a owl:NamedIndividual, cco:WebServer ;
+    cco:elucidation "An extensible web server created by Microsoft for use with the Windows NT family."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Internet_Information_Services"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Internet Information Services Web Server"@en .    
+
+cco:DotNETSoftwareFramework a owl:NamedIndividual, cco:SoftwareFramework ;
+    cco:elucidation "A software framework developed by Microsoft that runs primarily on Microsoft Windows."@en ;
+    dc:source "https://en.wikipedia.org/wiki/.NET_Framework"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label ".NET Software Framework"@en. 
+
+cco:XQueryQueryLanguage a owl:NamedIndividual, cco:QueryLanguage ;
+    cco:elucidation "a query and functional programming language that queries and transforms collections of structured and unstructured data, usually in the form of XML, text and with vendor-specific extensions for other data formats (JSON, binary, etc.)."@en ;
+    dc:source "https://en.wikipedia.org/wiki/XQuery"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "XQuery Query Language"@en .
+
+cco:RepresentationalStateTransfer a owl:NamedIndividual, cco:SoftwareArchitecture ;
+    cco:elucidation "A software architectural style that defines a set of constraints to be used for creating Web services."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Representational_state_transfer"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Representational State Transfer"@en .
+
+cco:XForms a owl:NamedIndividual, cco:ApplicationSoftware ;
+    cco:elucidation "An XML format used for collecting inputs from web forms."@en ;
+    dc:source "https://en.wikipedia.org/wiki/XForms"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "XForms"@en .
+
+cco:BCHSStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack for web applications that uses OpenBSD, C Programming Language, httpd, and SQLite Relational Database."@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "BCHS Stack"@en .
+
+cco:ELKStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses Elasticsearch, Logstash, and Kibana."@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "ELK Stack"@en .
+
+cco:GanetiStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses Xen or KVM, Linux with LVM, Distributed Replicated Block Device, Ganeti, and Ganeti Web Manager"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "Ganeti Stack"@en .
+
+cco:GLASSStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses Gemstone Database, Linux Operating System Model, Apache Web Server, Smalltalk Programming Langauge, and Seaside Web Framework"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "GLASS Stack"@en .
+
+cco:GRANDStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses GraphQL, ReactJS, Apollo Data Graph Platform, and Neo4j Database"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "GRAND Stack"@en .
+
+cco:JAMStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack based on client-side JavaScript, reusable APIs, and markup, was pioneered and created by Netlify."@en ;
+    dc:source "https://en.wikipedia.org/wiki/Netlify#Jamstack"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "JAM Stack"@en .
+
+cco:LAMPStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses Linux Operating System Model, Apache HTTP Server, MySQL Relational Database Model, and PHP Programming Langauge."@en ;
+    dc:source "https://en.wikipedia.org/wiki/LAMP_(software_bundle)"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "LAMP Stack"@en . 
+
+cco:LAPPStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses the Linux Operating System Model, Apache HTTP Server, PostgreSQL, and either Perl, PHP, or Python Languages."@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "LAPP Stack"@en .
+
+cco:LEAPStack a owl:NamedIndividual, cco:SoftwareStack ;
+    cco:elucidation "A Software Stack that uses the Linux Operating System Model, Eucalyptus, AppScale, and the Python Computer Language"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "LEAP Stack"@en .
+
+cco:LEMPStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses the Linux Operating System Model, Nginx Web Server, MySQL, and either Perl, PHP, or Python Languages"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "LEMP Stack"@en .
+
+cco:LLMPStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses the Linux Operating System Model, Lighttpd Web Server, MySQL Relational Database, and either Perl, PHP, or Python Languages"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "LLMP Stack"@en .
+
+cco:LYMEStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses the Linux Operating System Model, Yaws Web Server, Mnesia Database, and Erlang Programming Language"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "LLMP Stack"@en .
+
+cco:MAMPStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack composed of free and open-source software running with proprietary commercial software, to run dynamic web sites on computers running macOS or Windows."@en ;
+    dc:source "https://en.wikipedia.org/wiki/MAMP"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "MAMP Stack"@en .
+
+cco:MARQSStack a owl:NamedIndividual, cco:DataProcessingStack ;
+    cco:elucidation "A Data Processing Stack which runs Apache Mesos, Akka toollkit, Riak Database, Apache Kafka, and Apache Spark"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "MARQS Stack"@en .
+
+cco:MEANStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses MongoDB, Express.js, AngularJS, and Node.js"@en ;
+    dc:source "https://en.wikipedia.org/wiki/MEAN_(software_bundle)"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "MEAN Stack"@en .
+
+cco:MERNStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses MongoDB, Express.js, ReactJS, and Node.js"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "MERN Stack"@en .
+
+cco:MEVNStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses MongoDB, Express.js, Vue.js, and Node.js"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "MEVN Stack"@en .
+    
+cco:NMPStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses Nginx, MySql, and PHP Programming Language"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "NMP Stack"@en .
+
+cco:OpenACSStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses a Linux or Windows Operating System, AOLserver, PostgreSQL, OpenACS, and TCL Programming Language."@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "OpenACS Stack"@en .
+
+cco:PLONKStack a owl:NamedIndividual, cco:DataProcessingStack ;
+    cco:elucidation "A Data Processing Stack that uses Prometheus, Linkerd, OpenFaaS, NATS, and Kubernetes."@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "PLONK Stack"@en .
+
+cco:SMACKStack a owl:NamedIndividual, cco:DataProcessingStack ;
+    cco:elucidation "A Data Processing Stack that uses Apache Spark, Apache Mesos, Akka toolkit, Apache Cassandra, and Apache Kafka."@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "SMACK Stack"@en .
+
+cco:WAMPStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses Windows Operating System, Apache HTTP Server, MySQL, and either PHP, Perl, or Python Programming Languages"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "WAMP Stack"@en .
+
+cco:WIMPStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses Windows Operating System, Internet Information Services web server, MySQL, and either PHP, Perl, or Python Programming Languages"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "WIMP Stack"@en .
+
+cco:WINSStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses Windows Server Operating System, Internet Information Services web server, Microsoft SQL Server, and the .NET Software Framework"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "WINS Stack"@en .
+
+cco:WISAStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A Web Service Stack that uses Windows Server Operating System, Internet Information Services web server, Microsoft SQL Server, and the ASP.Net web framework"@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "WISA Stack"@en .
+
+cco:XAMPPStack a owl:NamedIndividual, cco:WebServiceStack ;
+    cco:elucidation "A free and open-source cross-platform web server solution stack package developed by Apache Friends, consisting mainly of the Apache HTTP Server, MariaDB database, and interpreters for scripts written in the PHP and Perl programming languages."@en ; 
+    dc:source "https://en.wikipedia.org/wiki/XAMPP"^^xsd:anyURI ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "XAMPP Stack"@en .
+
+cco:XRXStack a owl:NamedIndividual, cco:DataProcessingStack ;
+    cco:elucidation "A Data Processing Stack that uses an XML database, XQuery Query Language, REST, and XForms."@en ;
+    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Instances/CyberInstances"^^xsd:anyURI ;
+    rdfs:label "XRX Stack"@en .

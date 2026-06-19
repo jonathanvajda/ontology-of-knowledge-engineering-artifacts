@@ -1,0 +1,227 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://purl.obolibrary.org/obo/BFO_0000001>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:label "entity" ;
+  skos:definition "(Elucidation) An entity is anything that exists or has existed or will exist" ;
+  skos:example "[object Object]" .
+
+<http://purl.obolibrary.org/obo/BFO_0000003>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:label "occurrent" ;
+  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+  skos:definition "(Elucidation) An occurrent is an entity that unfolds itself in time or it is the start or end of such an entity or it is a temporal or spatiotemporal region" ;
+  skos:example "[object Object]" .
+
+<http://purl.obolibrary.org/obo/BFO_0000015>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:label "process" ;
+  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> ;
+  rdfs:subClassOf _:n3e78a85a4b8c470e9e76751bfe8890d6b103 ;
+  rdfs:subClassOf _:n3e78a85a4b8c470e9e76751bfe8890d6b107 ;
+  rdfs:subClassOf _:n3e78a85a4b8c470e9e76751bfe8890d6b108 ;
+  skos:altLabel "event" ;
+  skos:definition "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant" ;
+  skos:example "[object Object]" .
+
+<http://purl.obolibrary.org/obo/BFO_0000035>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:label "process boundary" ;
+  rdfs:subClassOf _:n3e78a85a4b8c470e9e76751bfe8890d6b125 ;
+  rdfs:subClassOf _:n3e78a85a4b8c470e9e76751bfe8890d6b124 ;
+  rdfs:subClassOf _:n3e78a85a4b8c470e9e76751bfe8890d6b126 ;
+  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> ;
+  rdfs:subClassOf _:n3e78a85a4b8c470e9e76751bfe8890d6b130 ;
+  skos:definition "p is a process boundary =Def p is a temporal part of a process & p has no proper temporal parts" ;
+  skos:example "[object Object]" .
+
+<http://purl.obolibrary.org/obo/BFO_0000117>
+  rdf:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:label "has occurrent part" ;
+  skos:definition "b has occurrent part c =Def c occurrent part of b" ;
+  skos:example "[object Object]" .
+
+<http://purl.obolibrary.org/obo/BFO_0000121>
+  rdf:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:label "has temporal part" ;
+  rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000117> ;
+  skos:definition "b has temporal part c =Def c temporal part of b" ;
+  skos:example "[object Object]" .
+
+<http://purl.obolibrary.org/obo/BFO_0000132>
+  rdf:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:label "occurrent part of" ;
+  skos:definition "(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c" ;
+  skos:example "[object Object]" .
+
+<http://purl.obolibrary.org/obo/BFO_0000139>
+  rdf:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:label "temporal part of" ;
+  rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000132> ;
+  skos:definition "b temporal part of c =Def b occurrent part of c & (b and c are temporal regions) or (b and c are spatiotemporal regions & b temporally projects onto an occurrent part of the temporal region that c temporally projects onto) or (b and c are processes or process boundaries & b occupies a temporal region that is an occurrent part of the temporal region that c occupies)" ;
+  skos:example "[object Object]" .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActOfAttending>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:isDefinedBy <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> ;
+  rdfs:label "Act of Attending" ;
+  rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/PerceivingProcess> ;
+  skos:definition "A Perceiving Process whereby relevant aspects of one's mental experience are focused on specific portions of reality." .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActOfEvaluation>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:isDefinedBy <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> ;
+  rdfs:label "Act of Evaluation" ;
+  rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActOfAttending> ;
+  skos:definition "A cognitive process that systematically appraises the significance or value of some portion of reality according to specified objectives and criteria." .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActOfInvestigation>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:isDefinedBy <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> ;
+  rdfs:label "Act of Investigation" ;
+  rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcess> ;
+  skos:definition "A cognitive process whose agent intends to establish or confirm that some portion of reality exists or does not exist." .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/BodilyProcess>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:isDefinedBy <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> ;
+  rdfs:label "Bodily Process" ;
+  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcess>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:isDefinedBy <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> ;
+  rdfs:label "Cognitive Process" ;
+  rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalMentalProcess> ;
+  skos:definition "A mental process that brings into being, sustains, or modifies a cognitive representation." .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcessOfComparing>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:isDefinedBy <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> ;
+  rdfs:label "Cognitive Process of Comparing" ;
+  rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveUtilizationProcess> ;
+  skos:definition "A Cognitive Process that just is the taking of some Cognitive Representations as input and, based on the similarity relations represented by the inputs, outputting some Cognitive Representation." .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveUtilizationProcess>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:isDefinedBy <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> ;
+  rdfs:label "Cognitive Utilization Process" ;
+  rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcess> ;
+  skos:definition "A Cognitive Process that just is the taking of some Cognitive Representation(s) as input and, based on the inputs, outputting some Cognitive Representation." .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/MentalProcess>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:isDefinedBy <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> ;
+  rdfs:label "Mental Process" ;
+  rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/BodilyProcess> ;
+  skos:note "[object Object]" .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/PerceivingProcess>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:isDefinedBy <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> ;
+  rdfs:label "Perceiving Process" ;
+  rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/MentalProcess> ;
+  skos:definition "A mental process which is a) produced by a causal process (for example involving light rays or air vibrations) involving a part of the environment of the organism, and b) is experienced by the organism as being so caused, and c) in which the relevant part of the environment is thereby directly represented to the organism." .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalMentalProcess>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:isDefinedBy <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> ;
+  rdfs:label "Representational Mental Process" ;
+  rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/MentalProcess> ;
+  skos:definition "a mental process that is the coming into being, sustaining, modifying, or terminating a mental representation." .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/SemanticComparing>
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  dcterms:created "2026-06-19T17:42:17.616Z" ;
+  dcterms:source "OntoEagle built-in graph" ;
+  rdfs:isDefinedBy <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CognitiveProcessOntology> ;
+  rdfs:label "Semantic Comparing" ;
+  rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/CognitiveProcessOfComparing> ;
+  skos:definition "A cognitive process of comparing that compares entities based on what each is about." .
+
+_:n3e78a85a4b8c470e9e76751bfe8890d6b103
+  rdf:type <http://www.w3.org/2002/07/owl#Restriction> ;
+  <http://www.w3.org/2002/07/owl#allValuesFrom> _:n3e78a85a4b8c470e9e76751bfe8890d6b104 ;
+  <http://www.w3.org/2002/07/owl#onProperty> <http://purl.obolibrary.org/obo/BFO_0000117> .
+
+_:n3e78a85a4b8c470e9e76751bfe8890d6b104
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  <http://www.w3.org/2002/07/owl#unionOf> ( <http://purl.obolibrary.org/obo/BFO_0000015> <http://purl.obolibrary.org/obo/BFO_0000035> ) .
+
+_:n3e78a85a4b8c470e9e76751bfe8890d6b107
+  rdf:type <http://www.w3.org/2002/07/owl#Restriction> ;
+  <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.obolibrary.org/obo/BFO_0000015> ;
+  <http://www.w3.org/2002/07/owl#onProperty> <http://purl.obolibrary.org/obo/BFO_0000132> .
+
+_:n3e78a85a4b8c470e9e76751bfe8890d6b108
+  rdf:type <http://www.w3.org/2002/07/owl#Restriction> ;
+  <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.obolibrary.org/obo/BFO_0000015> ;
+  <http://www.w3.org/2002/07/owl#onProperty> <http://purl.obolibrary.org/obo/BFO_0000139> .
+
+_:n3e78a85a4b8c470e9e76751bfe8890d6b124
+  rdf:type <http://www.w3.org/2002/07/owl#Restriction> ;
+  <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.obolibrary.org/obo/BFO_0000035> ;
+  <http://www.w3.org/2002/07/owl#onProperty> <http://purl.obolibrary.org/obo/BFO_0000117> .
+
+_:n3e78a85a4b8c470e9e76751bfe8890d6b125
+  rdf:type <http://www.w3.org/2002/07/owl#Restriction> ;
+  <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.obolibrary.org/obo/BFO_0000035> ;
+  <http://www.w3.org/2002/07/owl#onProperty> <http://purl.obolibrary.org/obo/BFO_0000121> .
+
+_:n3e78a85a4b8c470e9e76751bfe8890d6b126
+  rdf:type <http://www.w3.org/2002/07/owl#Restriction> ;
+  <http://www.w3.org/2002/07/owl#allValuesFrom> _:n3e78a85a4b8c470e9e76751bfe8890d6b127 ;
+  <http://www.w3.org/2002/07/owl#onProperty> <http://purl.obolibrary.org/obo/BFO_0000132> .
+
+_:n3e78a85a4b8c470e9e76751bfe8890d6b127
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  <http://www.w3.org/2002/07/owl#unionOf> ( <http://purl.obolibrary.org/obo/BFO_0000015> <http://purl.obolibrary.org/obo/BFO_0000035> ) .
+
+_:n3e78a85a4b8c470e9e76751bfe8890d6b130
+  rdf:type <http://www.w3.org/2002/07/owl#Restriction> ;
+  <http://www.w3.org/2002/07/owl#allValuesFrom> _:n3e78a85a4b8c470e9e76751bfe8890d6b131 ;
+  <http://www.w3.org/2002/07/owl#onProperty> <http://purl.obolibrary.org/obo/BFO_0000139> .
+
+_:n3e78a85a4b8c470e9e76751bfe8890d6b131
+  rdf:type <http://www.w3.org/2002/07/owl#Class> ;
+  <http://www.w3.org/2002/07/owl#unionOf> ( <http://purl.obolibrary.org/obo/BFO_0000015> <http://purl.obolibrary.org/obo/BFO_0000035> ) .
